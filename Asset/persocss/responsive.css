@@ -7,21 +7,20 @@
     margin: 0;
     /* font-size: 400px; */
     position: absolute;
-    left: 14vw;
-    top: 45vh;
+    left: 45vw;
+    top: 35vh;
     text-align: center;
-    font-size: 7vw;
     text-align: center;
-    font-size: 7vw;
+    font-size: 10vw;
   }
   .carousel-inner {
-    width: 100%;
+    width: 300%;
     position: absolute;
     top: 52vh;
-    left: -25vw;
+    left: 6vw;
   }
 
-  .callnow_bt a {
+  /* .callnow_bt a {
    padding-left: 2px;
 	width: 158px;
 	font-size: 11px;
@@ -32,7 +31,7 @@
 	border-radius: 8px;
 	height: 25px;
 	display: flex;
-}
+} */
 
   #banner_slider a.carousel-control-next {
       display: none;

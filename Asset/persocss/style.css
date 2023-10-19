@@ -176,7 +176,7 @@ button {
   margin: 0;
   /* font-size: 400px; */
   position: absolute;
-  left: 11vw;
+  left: 17vw;
   top: 68vh;
   text-align: center;
   font-size: 3vw;
@@ -304,7 +304,7 @@ img#brand {
   width: 50%;
   position: absolute;
   top:30vh;
-  left: 6vw;
+  left: 16vw;
 }
 
 .flasPhoto {
@@ -414,12 +414,12 @@ img#brand {
 
 #banner_slider a.carousel-control-prev {
   top: 24vh;
-  left: 40vw;
+  left: 26vw;
 }
 
 #banner_slider a.carousel-control-next {
   top: 24vh;
-  left: 45vw;
+  left: 30vw;
   color: #fefefd;
   background-color: #4a4949;
 }

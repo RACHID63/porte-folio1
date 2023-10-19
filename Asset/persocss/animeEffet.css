@@ -24,28 +24,23 @@
     animation: blink 2s infinite;
   }
 
- 
   .lightbox .lb-caption {
     font-size: 20px; /* Remplacez 20px par la taille de police que vous souhaitez */
     color: #da6db2;
   }
 
-  .carousel-control-next {
-    display: none;
-  }
+  banner_slider a.carousel-control-next
 
   .apparaisse {
     visibility: visible;
   }
 
-
-
   @keyframes moveLeft {
     0% {
-      left: 498px;
+      left:958px;
     }
     100% {
-      left: 0;
+      left: 450px;
     }
   }
   
