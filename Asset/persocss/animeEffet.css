@@ -1,0 +1,62 @@
+#mariage-gallery .img-fluid {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #mariage-gallery .img-fluid:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #mariage-gallery  {
+    border: solid white 2px;
+    box-shadow: 0px 1px 20px 20px rgb(233 221 221 / 75%);
+  }
+
+
+  /* flash lumineux buton galerie */
+  @keyframes blink {
+    0% { border-color: #ebd3d3; }
+    50% { border-color: wheat; }
+    100% { border-color: #ebee14; }
+  }
+  
+  .btn {
+    animation: blink 2s infinite;
+  }
+
+ 
+  .lightbox .lb-caption {
+    font-size: 20px; /* Remplacez 20px par la taille de police que vous souhaitez */
+    color: #da6db2;
+  }
+
+  .carousel-control-next {
+    display: none;
+  }
+
+  .apparaisse {
+    visibility: visible;
+  }
+
+
+
+  @keyframes moveLeft {
+    0% {
+      left: 498px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  .banner_img img {
+    position: relative;
+    animation: moveLeft 2s linear; /* Durée et type d'animation */
+  }
+
+ 
+  
+
+
+
+
