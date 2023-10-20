@@ -181,8 +181,9 @@ button {
   margin: 0;
   /* font-size: 400px; */
   position: absolute;
-  left: 17vw;
-  top: 31vh;
+  position: absolute;
+  left: 3vw;
+  top: 21vh;
   text-align: center;
   font-size: 3vw;
   background-color: #b04935;
