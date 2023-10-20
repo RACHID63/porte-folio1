@@ -23,35 +23,34 @@
   .btn {
     animation: blink 2s infinite;
   }
+  /* flash lumineux buton galerie */
+
+  /* Mouvement galerie */
+  
+  @keyframes moveLeft {
+    0% {
+      left:48vw;
+    }
+    100% {
+      left: 500px;
+    }
+  }
+  
+   .flasPhoto, .carousel-control {
+    position: relative;
+    animation: moveLeft 2s linear; /* Durée et type d'animation */
+  }
+
+  /* Mouvement galerie */
 
   .lightbox .lb-caption {
     font-size: 20px; /* Remplacez 20px par la taille de police que vous souhaitez */
     color: #da6db2;
   }
-
-  banner_slider a.carousel-control-next
-
-  .apparaisse {
-    visibility: visible;
-  }
-
-  @keyframes moveLeft {
-    0% {
-      left:958px;
-    }
-    100% {
-      left: 450px;
-    }
-  }
   
-  .banner_img img {
-    position: relative;
-    animation: moveLeft 2s linear; /* Durée et type d'animation */
-  }
-
- 
   
-
-
-
-
+  
+  
+  
+  
+  

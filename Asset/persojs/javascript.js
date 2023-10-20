@@ -28,6 +28,7 @@ $(window).on('load', function () {
 });
 
 
+
 window.onload = function() {
     var navbar = document.getElementById('navbar');
     if (window.location.href.indexOf('index') > -1) {
@@ -36,6 +37,15 @@ window.onload = function() {
         navbar.style.background = 'green';
     }
 }
+window.onload = function() {
+    var navbar = document.getElementById('navbar');
+    if (window.location.href.indexOf('index') > -1) {
+        navbar.style.background = 'blue';
+    } else if (window.location.href.indexOf('galerie') > -1) {
+        navbar.style.background = 'green';
+    }
+}
+
 
 
 

@@ -10,9 +10,11 @@
   transition: ease all 0.5s;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* html {
+  /* scroll-behavior: smooth; */
+/* } */ */
+
+body 
 
 h1,
 h2,
@@ -73,8 +75,10 @@ h6 a {
   opacity: 1;
 }
 
-button:focus {
-  outline: none;
+button, .btn {
+  color: whitesmoke;
+	font-weight: bold;
+  font-size:larger ;
 }
 
 ul,
@@ -93,6 +97,7 @@ p {
 }
 
 a {
+  font-size: 22px;
   color: #222222;
   text-decoration: none;
   outline: none !important;
@@ -177,7 +182,7 @@ button {
   /* font-size: 400px; */
   position: absolute;
   left: 17vw;
-  top: 68vh;
+  top: 31vh;
   text-align: center;
   font-size: 3vw;
   background-color: #b04935;
@@ -240,16 +245,7 @@ button {
   }
 }
 
-.header_section {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  float: left;
-  background-image: url(/Asset/images/fotor-ai-20231005131213.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  animation: scaleAnimation 5s ; /* Ajoutez cette ligne pour l'animation */
-}
+/* zoom image de fond */
 
 @keyframes scaleAnimation {
   0% {
@@ -262,9 +258,18 @@ button {
   }
 }
 
+.header_section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+  background-image: url(/Asset/images/fotor-ai-20231005131213.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
-#navbar {
-  background: linear-gradient(50deg, #f2856d, #ec886c);
+.navbar {
+  background: rgb(221, 101, 49);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -272,13 +277,7 @@ button {
   font-size: 20px;
   border-radius: 5px;
   text-transform: uppercase;
-}
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: red;
-}
+} 
 
 .navbar-brand {
   margin: 0px;
@@ -290,21 +289,11 @@ img#brand {
   border-radius: 0px;
 }
 
-/* @keyframes flashEffect {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-} */
-
 .carousel-inner {
-  width: 50%;
-  position: absolute;
-  top:30vh;
-  left: 16vw;
+	width: 50%;
+	position: absolute;
+	top: 30vh;
+	left: 8vw;
 }
 
 .flasPhoto {
@@ -328,6 +317,7 @@ img#brand {
   align-items: center;
   width: 50%;
   text-align: center;
+  
 }
 
 .banner_taital {
@@ -336,11 +326,12 @@ img#brand {
   color: black;
   font-weight: 800;
   margin-left: 0px;
-  padding: 12px;
+  padding: 8px;
   background-color: white;
   height: 56px;
   border-radius: 19px;
   margin-bottom: 10px;
+  opacity: 0.5;
 }
 
 .tasty_text {
@@ -359,33 +350,10 @@ img#brand {
   margin: 0px;
 }
 
-.btn_main {
-  width: 56%;
-  height: 78px;
-  margin-left: 0px;
-  padding-top: 0px;
-}
-
-.about_bt {
-  width: 175px;
-  float: left;
-}
-
-.about_bt a {
-  width: 100%;
-  float: left;
-  font-size: 18px;
-  background-color: #b04935;
-  color: #fefefd;
-  text-align: center;
-  padding: 12px;
-  border-radius: 5px;
-}
-
-.about_bt a:hover {
+/* .about_bt a:hover {
   color: #f4eae8;
   background-color: black;
-}
+} */
 
 .callnow_bt {
   width: 104%;
@@ -400,7 +368,7 @@ img#brand {
   float: left;
   font-size: 15px;
   color: white;
-  background-color: #d48272;
+  background-color: rgb(182, 83, 40);
   text-align: center;
   padding: 12px;
   /* margin-left: 100px; */
@@ -413,15 +381,16 @@ img#brand {
 }
 
 #banner_slider a.carousel-control-prev {
-  top: 24vh;
-  left: 26vw;
+	top: 14vh;
+	left: 1vw;
+	background: none;
 }
 
 #banner_slider a.carousel-control-next {
-  top: 24vh;
-  left: 30vw;
-  color: #fefefd;
-  background-color: #4a4949;
+	top: 14vh;
+	left: 20vw;
+	color: black;
+	background: none;
 }
 
 #banner_slider .carousel-control-next,
@@ -450,12 +419,13 @@ img {
   border-radius: 15px;
 }
 
-/* banner section end */
-
-
 footer {
   box-sizing: border-box;
-  background: linear-gradient(to right, #f2856d, #ec886c);
+  
+}
+
+#footer {
+  background-color:rgb(221, 101, 49) ;
 }
 
 .address_text {
