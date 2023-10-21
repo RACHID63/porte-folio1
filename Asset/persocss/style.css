@@ -204,6 +204,11 @@ button {
   animation: textclip 2s linear infinite;
 }
 
+.cacheForme {
+  visibility: hidden;
+}
+
+
 .navbar-toggle:hover,
 .navbar-toggle:focus {
   background-color: #fff;
