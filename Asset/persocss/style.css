@@ -270,8 +270,8 @@ button {
   width: 100%;
   float: left;
   background-image: url(/Asset/images/fotor-ai-20231005131213.png);
-  background-size: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar {
