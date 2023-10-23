@@ -10,11 +10,10 @@
   transition: ease all 0.5s;
 }
 
-/* html {
-  /* scroll-behavior: smooth; */
-/* } */ */
 
-body 
+body {
+  overflow-y: hidden;
+}
 
 h1,
 h2,

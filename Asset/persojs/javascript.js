@@ -1,8 +1,8 @@
 
 
 $(document).ready(function(){
-    $('#navbar').load('/asset/layout/navbar.html');
-    $('#footer').load('/asset/layout/footer.html');
+    $('#navbar').load('Asset/layout/navbar.html');
+    $('#footer').load('Asset/layout/footer.html');
 });
 
 $(window).on('load', function () {
