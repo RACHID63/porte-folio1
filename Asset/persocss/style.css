@@ -213,9 +213,9 @@ button {
   background-color: #fff;
 }
 
-  .navbar-toggle {
+  /* .navbar-toggle {
     display: block;
-  }
+  } */
 
 
 .navbar-header {
@@ -274,7 +274,7 @@ button {
 }
 
 .navbar-expand-lg .navbar-collapse {
-  display: flex!important;
+  display: flex;
   flex-basis: auto;
   justify-content: space-evenly;
 }
@@ -400,7 +400,7 @@ img#brand {
 #banner_slider a.carousel-control-next {
 	top: 14vh;
 	left: 20vw;
-	color: black;
+	color: red;
 	background: none;
 }
 
@@ -410,7 +410,7 @@ img#brand {
   height: 55px;
   opacity: 1;
   font-size: 16px;
-  color: #4a4949;
+  color:red;
   background-color: #efefef;
 }
 

@@ -1,4 +1,4 @@
-
+// import $ from 'node_modules/jquery/jquery.min.js';
 
 $(document).ready(function(){
     $('#navbar').load('Asset/layout/navbar.html');
@@ -85,6 +85,10 @@ bannerImg.addEventListener('animationend', function(event) {
         element.classList.add('apparaisse').style.display = 'bloc';
     }
 });
+
+
+
+
 
 
 

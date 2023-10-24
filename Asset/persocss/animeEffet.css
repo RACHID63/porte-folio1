@@ -29,25 +29,19 @@
   
   @keyframes moveLeft {
     0% {
-      left: 48vw;
-      transform: scale(1) rotateZ(0deg) translateX(0);
+      left: 498px;
     }
-    
-    25% {
-      transform: scale(1.2) rotateZ(-25deg);
-    }
-  
     100% {
-      left: 500px;
-      transform: scale(1.2) rotateZ(25deg);
+      left: 0;
     }
   }
-  
-  
-   .carousel-inner {
+
+  .carousel-item {
     position: relative;
     animation: moveLeft 2s linear; /* Durée et type d'animation */
   }
+
+
 
   /* Mouvement galerie */
 
