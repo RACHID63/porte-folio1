@@ -273,6 +273,12 @@ button {
   background-size: cover;
 }
 
+.navbar-expand-lg .navbar-collapse {
+  display: flex!important;
+  flex-basis: auto;
+  justify-content: space-evenly;
+}
+
 .navbar {
   background: rgb(221, 101, 49);
 }
