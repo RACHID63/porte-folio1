@@ -1,4 +1,6 @@
-
+body {
+ overflow-y: scroll;
+}
 
 
 .gallery {
@@ -9,12 +11,12 @@
 
 .btn {
   border: solid 12px white;
-  border-radius: 120px;
+  border-radius: 10px;
 }
 
 .gallery {
   border-radius: 20px;
-  border: solid white 2px;
+  border: solid rgb(255, 255, 255) 2px;
   box-shadow: 0px 1px 20px 20px rgba(233, 221, 221, 0.75);
 }
 
@@ -27,9 +29,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.image-container {
-  position: relative;
-}
+
 
  .cart-button {
   position: absolute;

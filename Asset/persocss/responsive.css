@@ -4,9 +4,9 @@
     background-color: rgb(185, 69, 43);
   }
 
-  .navbar-expand-lg .navbar-collapse {
+  /* .navbar-expand-lg .navbar-collapse {
     display:list-item;
-  }
+  } */
 
   #app {
     margin: 0;
@@ -26,26 +26,5 @@
     left: -25vw;
   }
 
-  /* .navbar-toggler {
-    position: absolute;
-    left: 261px;
-    top: 31px;
-  } */
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* #banner_slider a.carousel-control-next {
-	top: 53vh;
-	left: 30vw;
-	
-} */
-
-  /* #banner_slider a.carousel-control-prev {
-	top: 53vh;
-	left: 24vw;
-	background-color: rgb(240, 11, 11);	
-} */
+  
 }

@@ -1,9 +1,10 @@
 // import $ from 'node_modules/jquery/jquery.min.js';
 
-$(document).ready(function(){
+$(function(){
     $('#navbar').load('Asset/layout/navbar.html');
     $('#footer').load('Asset/layout/footer.html');
 });
+
 
 $(window).on('load', function () {
     var hash = window.location.hash.slice(1); // Utilisez slice au lieu de substr
@@ -85,6 +86,42 @@ bannerImg.addEventListener('animationend', function(event) {
         element.classList.add('apparaisse').style.display = 'bloc';
     }
 });
+
+
+// galerie.js
+
+$(function() {
+    // Fonction pour effectuer la recherche
+    function rechercherMotCle(motCle) {
+        // Convertir le mot-clé en minuscules pour une recherche insensible à la casse
+        var motCleMinuscules = motCle.toLowerCase();
+
+        $(".image-container").hide(); // Masquer toutes les images
+
+        // Parcourir tous les éléments .image-container
+        $(".image-container").each(function() {
+            var imageContainer = $(this);
+
+            // Obtenir l'attribut data-title et le convertir en minuscules
+            var dataTitle = imageContainer.attr("data-title").toLowerCase();
+
+            // Vérifier si data-title contient le mot-clé
+            if (dataTitle.includes(motCleMinuscules)) {
+                // Si oui, afficher l'élément
+                imageContainer.show();
+            }
+        });
+    }
+
+    // Écouter l'événement de soumission du formulaire de recherche
+    $("#myForm").on("submit", function(e) {
+        e.preventDefault();
+        var motCle = $("#myForm input[type='search']").val(); // Récupérer le mot-clé entré
+        rechercherMotCle(motCle); // Appeler la fonction de recherche
+    });
+});
+
+
 
 
 
