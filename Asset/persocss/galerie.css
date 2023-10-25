@@ -32,6 +32,17 @@ body {
  .image-container {
    position: relative;
  }
+
+ /* Change la couleur du lien lorsqu'il est cliqué */
+.nav-link:active {
+  color: red;
+}
+
+/* Change la couleur du lien actif */
+.nav-link.active {
+  color: red;
+}
+
  
   .cart-button {
    position: absolute;
@@ -44,7 +55,15 @@ body {
    border: none;
    border-radius: 5px;
    cursor: pointer;
- } 
+ }
+ 
+ button.cart-button:hover{
+  color: white;
+  background-color: #ff00bb;
+  border: solid 3px ;
+ }
+
+
  
  .image-container:hover .cart-button {
    display: block;

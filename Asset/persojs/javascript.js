@@ -122,22 +122,7 @@ $(function() {
 });
 
 
-$(function() {
-    // Cacher le bouton "Ajouter" au chargement de la page
-    $(".cart-button").hide();
 
-    // Afficher le bouton "Ajouter" lorsque la souris passe sur un élément .image-container
-    $(".image-container").hover(
-        function() {
-            // Fonction à exécuter lorsque la souris entre dans l'élément
-            $(this).find(".cart-button").show();
-        },
-        function() {
-            // Fonction à exécuter lorsque la souris quitte l'élément
-            $(this).find(".cart-button").hide();
-        }
-    );
-});
 
 
 

@@ -1,6 +1,3 @@
-
-
-
 /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
@@ -9,7 +6,6 @@
   box-sizing: border-box !important;
   transition: ease all 0.5s;
 }
-
 
 /* body {
   overflow-y: hidden;
@@ -75,10 +71,11 @@ h6 a {
   opacity: 1;
 }
 
-button, .btn {
+button,
+.btn {
   color: whitesmoke;
-	font-weight: bold;
-  font-size:larger ;
+  font-weight: bold;
+  font-size: larger;
 }
 
 ul,
@@ -114,14 +111,12 @@ a,
   transition: all 0.3s ease-in-out;
 }
 
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    text-align: center;
-   
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+}
 
 :focus {
   outline: 0;
@@ -133,7 +128,7 @@ a,
 
 .btn-custom {
   margin-top: 20px;
-  background-color: transparent ;
+  background-color: transparent;
   border: 2px solid #ddd;
   padding: 12px 40px;
   font-size: 16px;
@@ -210,13 +205,12 @@ button {
   visibility: hidden;
 } */
 
-
 /* .navbar-toggle:hover,
 .navbar-toggle:focus {
   color: #160ef3;
 } */
 
-  /* .navbar-toggle {
+/* .navbar-toggle {
     display: block;
   } */
 
@@ -260,6 +254,7 @@ button {
     transform: scale(1);
     background-size: 100%;
   }
+
   100% {
     transform: scale(1.2);
     background-size: 110%;
@@ -285,7 +280,19 @@ button {
   font-size: 20px;
   border-radius: 5px;
   text-transform: uppercase;
-} 
+}
+
+/* Change la couleur du lien lorsqu'il est cliqué */
+.nav-link:active {
+  color: red;
+}
+
+/* Change la couleur du lien actif */
+.nav-link.active {
+  color: red;
+}
+
+
 
 .navbar-brand {
   margin: 0px;
@@ -298,10 +305,10 @@ img#brand {
 }
 
 .carousel-inner {
-	width: 50%;
-	position: absolute;
-	top: 30vh;
-	left: 8vw;
+  width: 50%;
+  position: absolute;
+  top: 30vh;
+  left: 8vw;
 }
 
 .flasPhoto {
@@ -325,7 +332,6 @@ img#brand {
   align-items: center;
   width: 50%;
   text-align: center;
-  
 }
 
 .banner_taital {
@@ -389,16 +395,16 @@ img#brand {
 }
 
 #banner_slider a.carousel-control-prev {
-	top: 14vh;
-	left: 1vw;
-	background: none;
+  top: 14vh;
+  left: 1vw;
+  background: none;
 }
 
 #banner_slider a.carousel-control-next {
-	top: 14vh;
-	left: 20vw;
-	color: red;
-	background: none;
+  top: 14vh;
+  left: 20vw;
+  color: red;
+  background: none;
 }
 
 #banner_slider .carousel-control-next,
@@ -407,7 +413,7 @@ img#brand {
   height: 55px;
   opacity: 1;
   font-size: 16px;
-  color:red;
+  color: red;
   background-color: #efefef;
 }
 
@@ -420,8 +426,10 @@ img#brand {
 }
 
 img {
-  width: 100%; /* L'image prendra toute la largeur de son conteneur */
-  height: 100%; /* L'image prendra toute la hauteur de son conteneur */
+  width: 100%;
+  /* L'image prendra toute la largeur de son conteneur */
+  height: 100%;
+  /* L'image prendra toute la hauteur de son conteneur */
   object-fit: cover;
   text-align: center;
   border-radius: 15px;
@@ -429,11 +437,10 @@ img {
 
 footer {
   box-sizing: border-box;
-  
 }
 
 #footer {
-  background-color:rgb(221, 101, 49) ;
+  background-color: rgb(221, 101, 49);
 }
 
 .address_text {
@@ -623,6 +630,7 @@ textarea#comment.update_mail::placeholder {
 .copyright_text a:hover {
   color: #363636;
 }
+
 /* copyright section end */
 .margin_top90 {
   margin-top: 90px;
