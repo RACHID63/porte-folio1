@@ -17,7 +17,7 @@
   @keyframes blink {
     0% { border-color: #ebd3d3; }
     50% { border-color: wheat; }
-    100% { border-color: #ebee14; }
+    100% { border-color: #c85e0d; }
   }
   
   .btn {
@@ -46,7 +46,7 @@
   /* Mouvement galerie */
 
   .lightbox .lb-caption {
-    font-size: 20px; /* Remplacez 20px par la taille de police que vous souhaitez */
+    font-size: 10px; /* Remplacez 20px par la taille de police que vous souhaitez */
     color: #da6db2;
   }
   
