@@ -8,11 +8,11 @@ body {
   border: solid white 2px;
   box-shadow: 0px 1px 20px 20px rgba(225, 25, 25, 0.75);
 }/*# sourceMappingURL=gallerie.css.map */
-
+/* 
 .btn {
   border: solid 12px white;
   border-radius: 10px;
-}
+} */
 
 .gallery {
   border-radius: 20px;
@@ -38,9 +38,9 @@ body {
   transform: translate(-50%, -50%);
   display: none;
   padding: 10px 20px;
-  background-color: #f8f9fa;
+  background-color: #0b56a1;
   border: none;
-  border-radius: 5px;
+  border-radius: 1px;
   cursor: pointer;
 } 
 

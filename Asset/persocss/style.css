@@ -69,6 +69,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
+  font-weight: bolder;
   color: #212121;
   text-decoration: none !important;
   opacity: 1;
