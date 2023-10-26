@@ -30,22 +30,22 @@ $(window).on('load', function () {
 
 
 
-window.onload = function() {
-    var navbar = document.getElementById('navbar');
-    if (window.location.href.indexOf('index') > -1) {
-        navbar.style.background = 'blue';
-    } else if (window.location.href.indexOf('galerie') > -1) {
-        navbar.style.background = 'green';
-    }
-}
-window.onload = function() {
-    var navbar = document.getElementById('navbar');
-    if (window.location.href.indexOf('index') > -1) {
-        navbar.style.background = 'blue';
-    } else if (window.location.href.indexOf('galerie') > -1) {
-        navbar.style.background = 'green';
-    }
-}
+// window.onload = function() {
+//     var navbar = document.getElementById('navbar');
+//     if (window.location.href.indexOf('index') > -1) {
+//         navbar.style.background = 'blue';
+//     } else if (window.location.href.indexOf('galerie') > -1) {
+//         navbar.style.background = 'green';
+//     }
+// }
+// window.onload = function() {
+//     var navbar = document.getElementById('navbar');
+//     if (window.location.href.indexOf('index') > -1) {
+//         navbar.style.background = 'blue';
+//     } else if (window.location.href.indexOf('galerie') > -1) {
+//         navbar.style.background = 'green';
+//     }
+// }
 
 
 
@@ -74,18 +74,18 @@ allButton.addEventListener('click', function() {
 
 
 // Sélectionnez l'élément qui contient l'animation moveLeft
-var bannerImg = document.querySelector('.banner_img');
+// var bannerImg = document.querySelector('.banner_img');
 
-// Ajoutez un auditeur d'événements pour l'événement d'animation 'animationend'
-bannerImg.addEventListener('animationend', function(event) {
-    // Vérifiez si l'animation qui s'est terminée est 'moveLeft'
-    if (event.animationName === 'moveLeft') {
-        // L'animation moveLeft s'est terminée, ajoutez la classe carousel-control-next
-        var carouselControlNext = document.querySelector('.carousel-control-next');
-        element.classList.add('apparaisse');
-        element.classList.add('apparaisse').style.display = 'bloc';
-    }
-});
+// // Ajoutez un auditeur d'événements pour l'événement d'animation 'animationend'
+// bannerImg.addEventListener('animationend', function(event) {
+//     // Vérifiez si l'animation qui s'est terminée est 'moveLeft'
+//     if (event.animationName === 'moveLeft') {
+//         // L'animation moveLeft s'est terminée, ajoutez la classe carousel-control-next
+//         var carouselControlNext = document.querySelector('.carousel-control-next');
+//         element.classList.add('apparaisse');
+//         element.classList.add('apparaisse').style.display = 'bloc';
+//     }
+// });
 
 
 // galerie.js
@@ -102,10 +102,10 @@ $(function() {
         $(".image-container").each(function() {
             var imageContainer = $(this);
 
-            // Obtenir l'attribut data-title et le convertir en minuscules
-            var dataTitle = imageContainer.attr("data-title").toLowerCase();
+            // Obtenir l'attribut alt et le convertir en minuscules
+            var dataTitle = imageContainer.attr("alt").toLowerCase();
 
-            // Vérifier si data-title contient le mot-clé
+            // Vérifier si alt contient le mot-clé
             if (dataTitle.includes(motCleMinuscules)) {
                 // Si oui, afficher l'élément
                 imageContainer.show();
@@ -117,6 +117,7 @@ $(function() {
     $("#myForm").on("submit", function(e) {
         e.preventDefault();
         var motCle = $("#myForm input[type='search']").val(); // Récupérer le mot-clé entré
+        console.log(motCle);
         rechercherMotCle(motCle); // Appeler la fonction de recherche
     });
 });

@@ -19,9 +19,11 @@
 <body class="bg-dark">
     <div id="navbar"></div>
     <h1 class="text-center my-4 text-light ">Galerie de photos</h1>
-    <div class="d-flex justify-content-center mb-5 mt-5 ">
-        <div class="btn-group" role="group" aria-label="Catégories de la galerie">
-            <button type="button" class="btn btn-info btn-lg gallery-button  p-3 " data-gallery="all">Tout</button>
+
+    <div id="boutonImage" class=" boutonImage d-flex justify-content-center mb-5 mt-5" style="position: sticky; top: 0;">
+        <div class="d-flex justify-content-center mb-5 mt-5 " style="position: sticky; top: 0;">
+
+            <button type="button" class="btn btn-info btn-lg gallery-button  p-2 " data-gallery="all">Tout</button>
             <button type="button" class="btn btn-info btn-lg gallery-button  p-3 "
                 data-gallery="famille">Famille</button>
             <button type="button" class="btn btn-info gallery-button " data-gallery="mariage">Mariage</button>
@@ -31,11 +33,12 @@
             <button type="button" class="btn btn-info gallery-button " data-gallery="baptême">Baptême</button>
             <!-- Ajoutez un bouton pour chaque galerie -->
         </div>
+
     </div>
     <div class="container">
         <div id="all-gallery" class="row gallery justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/" data-lightbox="image-1"
+                <a href="Asset/images/mariage/marriage-636018_1280.jpg" data-lightbox="image-1"
                     data-title="Description de l'image">
                     <img src="Asset/images/mariage/marriage-636018_1280.jpg" class="img-fluid"
                         alt="Description de l'image">
@@ -104,7 +107,7 @@
             <div class= "col-sm -6 col-md -4 col-lg -3 m -3 image-container bg-dark ">
                 <a href= "Asset/images/Famille/mama-5098862_1280.jpg " data-lightbox= "image -1 "
                     data-title= "description ">
-                    <img src= "Asset/images/Famille/mama-5098862_1280.jpg " class= "img-fluid "
+                    <img src= "Asset/images/Famille/mama-5098862_1280.jpg "  class= "img-fluid "
                         alt= "Description de l'image ">
                     <div class= "lightbox-content ">
                         <button class= "cart-button btn btn-info  rounded -5 ">
@@ -129,7 +132,6 @@
             </div>
         </div>
         
-
         <div id="mariage-gallery" class="row gallery justify-content-center bg-dark  " style="display: none;">
             <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
                 <a id="coupleAssis" href="Asset/images/mariage/couple-260899_1280.jpg" data-lightbox="image-1"

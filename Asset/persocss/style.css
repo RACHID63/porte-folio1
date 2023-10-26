@@ -396,13 +396,13 @@ img#brand {
 
 #banner_slider a.carousel-control-prev {
   top: 14vh;
-  left: 1vw;
+  left: 0vw;
   background: none;
 }
 
 #banner_slider a.carousel-control-next {
   top: 14vh;
-  left: 20vw;
+  left: 22vw;
   color: red;
   background: none;
 }
