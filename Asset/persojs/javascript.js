@@ -28,28 +28,6 @@ $(window).on('load', function () {
     
 });
 
-
-
-// window.onload = function() {
-//     var navbar = document.getElementById('navbar');
-//     if (window.location.href.indexOf('index') > -1) {
-//         navbar.style.background = 'blue';
-//     } else if (window.location.href.indexOf('galerie') > -1) {
-//         navbar.style.background = 'green';
-//     }
-// }
-// window.onload = function() {
-//     var navbar = document.getElementById('navbar');
-//     if (window.location.href.indexOf('index') > -1) {
-//         navbar.style.background = 'blue';
-//     } else if (window.location.href.indexOf('galerie') > -1) {
-//         navbar.style.background = 'green';
-//     }
-// }
-
-
-
-
 // cloner toutes les images 
 // Sélectionnez le bouton 'Toutes les images'
 let allButton = document.querySelector('button[data-gallery="all"]');
@@ -88,7 +66,7 @@ allButton.addEventListener('click', function() {
 // });
 
 
-//recherche dans galerie.js
+// galerie.js
 $(function(){
     $('#navbar').load('Asset/layout/navbar.html', function(){
         // Le contenu de la navbar a été chargé
@@ -116,6 +94,8 @@ $(function(){
         });
     });
 });
+
+
 
 
 
