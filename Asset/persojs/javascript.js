@@ -89,7 +89,7 @@ $(function(){
                 });
             });
 
-            // Autres scripts ou actions que vous souhaitez ajouter
+            
 
         });
     });
