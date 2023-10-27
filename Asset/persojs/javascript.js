@@ -89,38 +89,34 @@ allButton.addEventListener('click', function() {
 
 
 // galerie.js
+$(function(){
+    $('#navbar').load('Asset/layout/navbar.html', function(){
+        // Le contenu de la navbar a été chargé
+        $('#footer').load('Asset/layout/footer.html', function(){
+            // Le contenu du footer a été chargé
 
-$(function() {
-    // Fonction pour effectuer la recherche
-    function rechercherMotCle(motCle) {
-        // Convertir le mot-clé en minuscules pour une recherche insensible à la casse
-        var motCleMinuscules = motCle.toLowerCase();
+            // Votre script jQuery pour la recherche de mots-clés
+            $('#myForm').submit(function(e){
+                e.preventDefault(); 
+                var keyword = $('#mySearch').val().toLowerCase(); 
 
-        $(".image-container").hide(); // Masquer toutes les images
+                $('a[data-title]').each(function(){
+                    var title = $(this).data('title').toLowerCase(); 
 
-        // Parcourir tous les éléments .image-container
-        $(".image-container").each(function() {
-            var imageContainer = $(this);
+                    if(title.includes(keyword)){
+                        $(this).show(); 
+                    } else {
+                        $(this).hide(); 
+                    }
+                });
+            });
 
-            // Obtenir l'attribut alt et le convertir en minuscules
-            var dataTitle = imageContainer.attr("alt").toLowerCase();
+            // Autres scripts ou actions que vous souhaitez ajouter
 
-            // Vérifier si alt contient le mot-clé
-            if (dataTitle.includes(motCleMinuscules)) {
-                // Si oui, afficher l'élément
-                imageContainer.show();
-            }
         });
-    }
-
-    // Écouter l'événement de soumission du formulaire de recherche
-    $("#myForm").on("submit", function(e) {
-        e.preventDefault();
-        var motCle = $("#myForm input[type='search']").val(); // Récupérer le mot-clé entré
-        console.log(motCle);
-        rechercherMotCle(motCle); // Appeler la fonction de recherche
     });
 });
+
 
 
 
