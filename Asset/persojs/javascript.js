@@ -88,7 +88,7 @@ allButton.addEventListener('click', function() {
 // });
 
 
-// galerie.js
+//recherche dans galerie.js
 $(function(){
     $('#navbar').load('Asset/layout/navbar.html', function(){
         // Le contenu de la navbar a été chargé
