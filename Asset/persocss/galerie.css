@@ -7,10 +7,13 @@ body {
 	top: 21%;
 	left: 39%;
 }
- 
+
+#btnGalerie {
+  display: none;
+}
  div#boutonImage {
   position: sticky;
-  top: 30px;
+  top: 20px;
   z-index: 1000;
  }
 
@@ -25,11 +28,11 @@ body {
    border-radius: 10px;
  }
  
- .gallery {
+ /* .gallery {
    border-radius: 20px;
    border: solid rgb(255, 255, 255) 2px;
    box-shadow: 0px 1px 20px 20px rgba(233, 221, 221, 0.75);
- }
+ } */
  
  #mariage-gallery .img-fluid {
    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

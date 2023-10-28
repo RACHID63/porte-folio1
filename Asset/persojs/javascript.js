@@ -1,10 +1,8 @@
-// import $ from 'node_modules/jquery/jquery.min.js';
 
 $(function(){
     $('#navbar').load('Asset/layout/navbar.html');
     $('#footer').load('Asset/layout/footer.html');
 });
-
 
 $(window).on('load', function () {
     var hash = window.location.hash.slice(1); // Utilisez slice au lieu de substr
@@ -50,22 +48,6 @@ allButton.addEventListener('click', function() {
     });
 });
 
-
-// Sélectionnez l'élément qui contient l'animation moveLeft
-// var bannerImg = document.querySelector('.banner_img');
-
-// // Ajoutez un auditeur d'événements pour l'événement d'animation 'animationend'
-// bannerImg.addEventListener('animationend', function(event) {
-//     // Vérifiez si l'animation qui s'est terminée est 'moveLeft'
-//     if (event.animationName === 'moveLeft') {
-//         // L'animation moveLeft s'est terminée, ajoutez la classe carousel-control-next
-//         var carouselControlNext = document.querySelector('.carousel-control-next');
-//         element.classList.add('apparaisse');
-//         element.classList.add('apparaisse').style.display = 'bloc';
-//     }
-// });
-
-
 // galerie.js
 $(function(){
     $('#navbar').load('Asset/layout/navbar.html', function(){
@@ -74,7 +56,7 @@ $(function(){
             // Le contenu du footer a été chargé
 
             // Votre script jQuery pour la recherche de mots-clés
-            $('#myForm').submit(function(e){
+            $(document).on('submit', '#myForm', function(e){
                 e.preventDefault(); 
                 var keyword = $('#mySearch').val().toLowerCase(); 
 
@@ -89,11 +71,31 @@ $(function(){
                 });
             });
 
-            
-
         });
     });
 });
+
+// affichage de toute la gallery 
+$(function(){
+    // ... Votre code existant ...
+
+    // Ajoutez cet événement pour le lien "Galerie/shop"
+    $(document).on('click', 'a[href="galerie.html"]', function(e){
+        e.preventDefault(); // Empêche la redirection vers galerie.html
+
+        // Activez le bouton "all-gallery"
+        $('#couple-gallery').addClass('btn-active');
+
+        // Affichez toute la galerie (votre code ici)
+        $('#couple-gallery').show()
+
+        // Vous pouvez également masquer d'autres parties de la galerie si nécessaire
+        // ...
+    });
+
+    // ... Suite de votre code ...
+});
+
 
 
 
