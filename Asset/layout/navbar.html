@@ -9,36 +9,37 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-5">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li id="btnGalerie" class="nav-item">
-                    <a class="nav-link" href="galerie.html">Galerie/shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <!-- Menu déroulant "Galerie" -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Galerie
-                    </a>
-                    <ul id="deroulant" class="dropdown-menu " aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Tout</a></li>
-                        <li><a class="dropdown-item" href="#">Famille</a></li>
-                        <li><a class="dropdown-item" href="#">Mariage</a></li>
-                        <li><a class="dropdown-item" href="#">Couple</a></li>
-                        <li><a class="dropdown-item" href="#">Grossesse</a></li>
-                        <li><a class="dropdown-item" href="#">Bébé</a></li>
-                        <li><a class="dropdown-item" href="#">Baptême</a></li>
-                    </ul>
-                </li>
+                <div class="d-flex align-items-center me-5">
+                    <li class="nav-item ">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li id="btnGalerie " class="nav-item">
+                        <a class="nav-link" href="galerie.html">Galerie/shop</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </div>
+                
+                <!-- Menu  "Galerie" -->
+                 
+                <button type="button" class="btn btn-info btn-lg gallery-button  p-2 " data-gallery="all">Tout</button>
+                <button type="button" class="btn btn-info btn-lg gallery-button  p-3 "
+                    data-gallery="famille">Famille</button>
+                <button type="button" class="btn btn-info gallery-button " data-gallery="mariage">Mariage</button>
+                <button type="button" class="btn btn-info gallery-button " data-gallery="couple">Couple</button>
+                <button type="button" class="btn btn-info gallery-button " data-gallery="Grossesse">Grossesse</button>
+                <button type="button" class="btn btn-info gallery-button " data-gallery="bébé">Bébé</button>
+                <button type="button" class="btn btn-info gallery-button " data-gallery="baptême">Baptême</button>
+                
+               
+                  
             </ul>
             <form id="myForm" class="index-page d-flex me-5">
                 <input  id="mySearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -47,3 +48,4 @@
         </div>
     </div>
 </nav>
+

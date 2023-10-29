@@ -1,5 +1,16 @@
-form#myForm {
+ form#myForm {
     visibility: hidden;
     }
+
+ .groupeGalerie {
+    background-color: aqua;
+    visibility: hidden;
+}
+
+#menuGalerie {
+   display: hidden;  
+}
+
+  
 
     

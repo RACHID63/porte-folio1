@@ -86,21 +86,23 @@ ol {
   list-style: none;
 }
 
-p {
+/* p {
   margin: 20px;
   font-weight: 300;
   font-size: 15px;
   line-height: 24px;
-}
+} */
 
 a {
-  font-size: 22px;
+  margin-left: 25px;
+  font-size: 30px;
   color: #222222;
   text-decoration: none;
   outline: none !important;
+  text-align: center;
 }
 
-a,
+/* a,
 .btn {
   text-decoration: none !important;
   outline: none !important;
@@ -109,7 +111,7 @@ a,
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 img {
   width: 100%;
