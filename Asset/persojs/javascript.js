@@ -75,26 +75,34 @@ $(function(){
     });
 });
 
-// affichage de toute la gallery 
-$(function(){
-    // ... Votre code existant ...
+// affichage à partir du menu
+$(function() {
+    $('.gallery-button').on('click', function(event) {
+        event.stopPropagation();
+        var gallery = $(this).data('gallery');
+        $('.gallery').hide();
+        $('#' + gallery + '-gallery').show();
 
-    // Ajoutez cet événement pour le lien "Galerie/shop"
-    $(document).on('click', 'a[href="galerie.html"]', function(e){
-        e.preventDefault(); // Empêche la redirection vers galerie.html
-
-        // Activez le bouton "all-gallery"
-        $('#couple-gallery').addClass('btn-active');
-
-        // Affichez toute la galerie (votre code ici)
-        $('#couple-gallery').show()
-
-        // Vous pouvez également masquer d'autres parties de la galerie si nécessaire
-        // ...
+        $('.gallery-button').removeClass('btn-active');
+        $(this).addClass('btn-active');
     });
 
-    // ... Suite de votre code ...
+    // Utilisez un élément parent pour attacher l'événement click
+    $(document).on('click', '.dropdown-item', function (event) {
+        event.stopPropagation();
+        var gallery = $(this).closest('li').data('gallery');
+        $('.gallery').hide();
+        $('#' + gallery + '-gallery').show();
+    });
+
+    // De même pour cet événement click
+    $(document).on('click', '.dropdown-item', function(event){
+        event.stopPropagation();
+        $('.dropdown-item').closest('li').removeClass('active');
+        $(this).closest('li').addClass('active');
+    });
 });
+
 
 
 

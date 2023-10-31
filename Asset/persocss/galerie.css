@@ -100,7 +100,7 @@ p {
   color: rgb(255, 255, 255);
 }
 
-button.btn-active {
+button.btn-active{
   /* text-decoration: underline; */
   width: 180px;
   background-color: #ff00bb;
@@ -109,4 +109,9 @@ button.btn-active {
   font-weight: bold;
   border: solid 2px black;
   font-size: larger;
+}
+
+.active {
+  color: black;
+  background-color: rgb(93, 42, 20);
 }
