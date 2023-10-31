@@ -263,22 +263,21 @@ body.index-page .search-form {
 
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 3px 10px;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 5px;
+  color: #ddd;
   text-transform: uppercase;
 }
 
 /* Change la couleur du lien lorsqu'il est cliqué */
 .nav-link:active {
-  color: red;
+  color: rgb(0, 26, 255);
 }
 
-/* Change la couleur du lien actif */
+Change la couleur du lien actif
 .nav-link.active {
   color: red;
 }
-
-
 
 .navbar-brand {
   margin: 0px;
@@ -289,6 +288,8 @@ body.index-page .search-form {
 img#brand {
   border-radius: 0px;
 }
+
+
 
 .carousel-inner {
   width: 50%;
@@ -334,13 +335,13 @@ img#brand {
   opacity: 0.5;
 }
 
-.tasty_text {
+/* .tasty_text {
   width: 100%;
   float: left;
   font-size: 24px;
   color: #e38773;
   font-weight: bold;
-}
+} */
 
 .banner_text {
   width: 100%;
