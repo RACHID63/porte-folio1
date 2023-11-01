@@ -5,6 +5,10 @@ body {
   background-color: #ffffff;
 }
 
+.contact_link3 {
+  font-size: 15px;
+}
+
 .layout_padding {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -753,6 +757,7 @@ a:focus {
 .info_section {
   background-color: #101010;
   color: #ffffff;
+  margin-top: 25px;
   padding: 75px 0 10px 0;
 }
 

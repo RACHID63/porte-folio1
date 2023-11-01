@@ -252,7 +252,7 @@ body.index-page .search-form {
   padding: 0;
   width: 100%;
   float: left;
-  background-image: url(/Asset/images/fotor-ai-20231005131213.png);
+  background-image:url('../images/fotor.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -288,8 +288,6 @@ Change la couleur du lien actif
 img#brand {
   border-radius: 0px;
 }
-
-
 
 .carousel-inner {
   width: 50%;
