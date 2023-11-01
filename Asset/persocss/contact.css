@@ -758,7 +758,7 @@ a:focus {
   background-color: #101010;
   color: #ffffff;
   margin-top: 25px;
-  padding: 75px 0 10px 0;
+  padding: 9px 0 10px 0;
 }
 
 .info_section .row > div {
@@ -780,10 +780,5 @@ a:focus {
   color: #ffffff;
 }
 
-/* footer {
 
-	display: flex;
-  /* align-items: center; */
-	/* text-align: center;
-	background: gray; */
-/* } */ */
+
