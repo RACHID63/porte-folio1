@@ -11,6 +11,10 @@
    display: hidden;  
 }
 
+body.index-page #myForm  {
+   visibility:hidden;
+}
+
   
 
     

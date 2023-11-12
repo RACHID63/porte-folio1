@@ -58,15 +58,15 @@ div#boutonImage {
   position: relative;
 }
 
-/* Change la couleur du lien lorsqu'il est cliqué */
+/* Change la couleur du lien lorsqu'il est cliqué
 .nav-link:active {
   color: red;
-}
+} */
 
-/* Change la couleur du lien actif */
+/* Change la couleur du lien actif
 .nav-link.active {
   color: red;
-}
+} */
 
 .cart-button {
   position: absolute;
@@ -111,7 +111,19 @@ button.btn-active{
   font-size: larger;
 }
 
+/* .active {
+  background-color: rgb(20, 93, 30);
+  
+} 
+
+*/
+
 .active {
-  color: black;
-  background-color: rgb(93, 42, 20);
+  background-color: green 
+ 
 }
+.dropdown-menu li a.dropdown-item:active {
+  background-color: rgb(136, 176, 136) !important;
+  color: white !important;
+}
+

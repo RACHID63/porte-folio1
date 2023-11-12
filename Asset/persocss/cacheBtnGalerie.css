@@ -1,6 +1,6 @@
 
-li#btnGalerie {
-    display: none;
-}
 
+body.galerie-page li#btnGalerie a.nav-link {
+    visibility:hidden;
+}
 

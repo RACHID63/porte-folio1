@@ -1,5 +1,19 @@
 
 
-#menuGalerie {
+/* #menuGalerie {
     display: none;
+} */
+
+/* body.index-page #myForm  {
+    visibility:hidden;
+} 
+
+*/
+
+/* body.galerie-page li #btnGalerie a .nav-link  {
+    visibility:hidden;
+ } */
+
+ body.galerie-page li#btnGalerie a.nav-link {
+    visibility:hidden;
 }

@@ -48,7 +48,7 @@ allButton.addEventListener('click', function() {
     });
 });
 
-// galerie.js
+// galerie.js  recherche images mots-clés
 $(function(){
     $('#navbar').load('Asset/layout/navbar.html', function(){
         // Le contenu de la navbar a été chargé
@@ -60,15 +60,28 @@ $(function(){
                 e.preventDefault(); 
                 var keyword = $('#mySearch').val().toLowerCase(); 
 
+                // Cache toutes les galeries
+                $('.gallery').hide();
+
+                // Active le bouton "all-gallery"
+                $('#all-gallery-button').addClass('active');
+
+                // Vide la galerie "all-gallery"
+                $('#all-gallery').empty();
+
                 $('a[data-title]').each(function(){
                     var title = $(this).data('title').toLowerCase(); 
 
                     if(title.includes(keyword)){
-                        $(this).show(); 
-                    } else {
-                        $(this).hide(); 
+                        // Clone l'élément, modifie son CSS, et l'ajoute à "all-gallery"
+                        var clone = $(this).clone().show();
+                        clone.find('.img-fluid').css('max-width', '30%');
+                        $('#all-gallery').append(clone);
                     }
                 });
+
+                // Affiche "all-gallery"
+                $('#all-gallery').show();
             });
 
         });
@@ -101,6 +114,17 @@ $(function() {
         $('.dropdown-item').closest('li').removeClass('active');
         $(this).closest('li').addClass('active');
     });
+});
+
+// Sélectionner tous les liens dans le navbar
+var links = $(".navbar-nav li a");
+
+// Ajouter un événement click sur chaque lien
+links.on("click", function() {
+  // Enlever la classe active aux autres liens
+  links.removeClass("active");
+  // Ajouter la classe active au lien cliqué
+  $(this).addClass("active");
 });
 
 
