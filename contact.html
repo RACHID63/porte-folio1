@@ -11,20 +11,16 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
   <title>CHARLES CANTIN</title>
-
-  <!-- bootstrap core css -->
+  <!-- bootstrap css -->
   <link rel="stylesheet" type="text/css" href="Asset/persocss/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
   <link href="Asset/persocss/contact.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- <link href="css/responsive.css" rel="stylesheet" /> -->
 </head>
 
 <body class="sub_page">
@@ -43,19 +39,19 @@
             <a href="" class="contact_link1">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
-              Photographe professionnel
+                Photographe professionnel
               </span>
             </a>
             <a href="" class="contact_link2">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-               tel : +01 1234567890
+                tel : +01 1234567890
               </span>
             </a>
             <a href="" class="contact_link3">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-               charlescantion@sitefacile.ne
+                charlescantion@sitefacile.ne
               </span>
             </a>
           </div>
@@ -66,10 +62,11 @@
           <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
               <span>
-               CHARLES CANTIN
+                CHARLES CANTIN
               </span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""></span>
             </button>
 
@@ -85,7 +82,7 @@
                   <a class="nav-link" href="galerie.html"> Galerie/shop</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="guard.html">Bloc</a>
+                  <a class="nav-link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="contact.html">Contacter nous</a>
@@ -120,21 +117,21 @@
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Nom complet" />
+                    <input type="text" name="nom" placeholder="Nom complet" />
                   </div>
                   <div>
-                    <input type="email" placeholder="Email " />
+                    <input type="email" name="email" placeholder="Email " />
                   </div>
                   <div>
-                    <input type="text" placeholder="Numéro de téléphone" />
+                    <input type="text" name="num" placeholder="Numéro de téléphone" />
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Méssage" class="message_input" />
+                    <input type="text" name="méssage" placeholder="Méssage" class="message_input" />
                   </div>
-                  <div class="btn-box">
-                    <div class="btn btn-primary" type="submit">
-                      Envoyer
-                    </DIV>
+                  <div class="btn-box d-flex">
+                    <div id="contact_form" class="btn-box">
+                      <button class="btn btn-primary text-center" type="submit">Envoyer</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,7 +150,7 @@
           <div class="info_logo">
             <a class="navbar-brand" href="index.html">
               <span>
-              CHERLES CANTIN
+                CHERLES CANTIN
               </span>
             </a>
             <p>
@@ -257,9 +254,9 @@
   </footer>
   <!-- footer section -->
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="Asset/persojs/jquery.min.js"></script>
+  <script src="Asset/persojs/bootstrap.min.js"></script>
+  <script src="Asset/persojs/envoiFormulaire.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </body>

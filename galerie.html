@@ -1,601 +1,711 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Asset/persocss/responsive.css">
-    <link rel="stylesheet" type="text/css" href="Asset/persocss/galerie.css">
-    <link rel="stylesheet" type="text/css" href="Asset/persocss/style.css">
-    <link rel="stylesheet" href="Asset/persocss/cacheBtnGalerie.css">
-    <!-- <link rel="stylesheet" href="Asset/persocss/cacheMenuGalerie.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="Asset/persocss/animeEffet.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/lightbox2/dist/css/lightbox.min.css">
- 
-    <title>Galerie de photos</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-
-<body class="galerie-page  bg-dark">
-    <div id="navbar"></div>
-    <h1 class="text-center my-4 text-light ">Galerie de photos</h1>
-
-    <div id="boutonImage"  class=" shadow-lg p-3 boutonImage d-flex justify-content-center mb-1 mt-5" style="position: sticky; top: 0;">
-        <div id="boxButton" class="d-flex justify-content-center " style="position: sticky; top: 0;">
-            <button type="button" class="btn btn-info btn-lg gallery-button  p-2 " data-gallery="all">Tout</button>
-            <button type="button" class="btn btn-info btn-lg gallery-button  p-3 "
-                data-gallery="famille">Famille</button>
-            <button type="button" class="btn btn-info gallery-button " data-gallery="mariage">Mariage</button>
-            <button type="button" class="btn btn-info gallery-button " data-gallery="couple">Couple</button>
-            <button type="button" class="btn btn-info gallery-button " data-gallery="Grossesse">Grossesse</button>
-            <button type="button" class="btn btn-info gallery-button " data-gallery="bébé">Bébé</button>
-            <button type="button" class="btn btn-info gallery-button " data-gallery="baptême">Baptême</button>
-            <!-- Ajoutez un bouton pour chaque galerie -->
-        </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="Asset/persocss/responsive.css" rel="stylesheet"/>
+  <link href="Asset/persocss/galerie.css" rel="stylesheet" type="text/css"/>
+  <link href="Asset/persocss/style.css" rel="stylesheet" type="text/css"/>
+  <link href="Asset/persocss/cacheBtnGalerie.css" rel="stylesheet"/>
+  <!-- <link rel="stylesheet" href="Asset/persocss/cacheMenuGalerie.css"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="Asset/persocss/animeEffet.css" rel="stylesheet" type="text/css"/>
+  <link href="node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" type="text/css"/>
+  <title>
+   Galerie de photos
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+ </head>
+ <body class="galerie-page bg-dark">
+  <div id="navbar">
+  </div>
+  <h1 class="text-center my-4 text-light">
+   Galerie de photos
+  </h1>
+  <div class="shadow-lg p-3 boutonImage d-flex justify-content-center mb-1 mt-5" id="boutonImage" style="position: sticky; top: 0;">
+   <div class="d-flex justify-content-center" id="boxButton" style="position: sticky; top: 0;">
+    <button class="btn btn-info btn-lg gallery-button p-2" data-gallery="all" type="button">
+     Tout
+    </button>
+    <button class="btn btn-info btn-lg gallery-button p-3" data-gallery="famille" type="button">
+     Famille
+    </button>
+    <button class="btn btn-info gallery-button" data-gallery="mariage" type="button">
+     Mariage
+    </button>
+    <button class="btn btn-info gallery-button" data-gallery="couple" type="button">
+     Couple
+    </button>
+    <button class="btn btn-info gallery-button" data-gallery="Grossesse" type="button">
+     Grossesse
+    </button>
+    <button class="btn btn-info gallery-button" data-gallery="bébé" type="button">
+     Bébé
+    </button>
+    <button class="btn btn-info gallery-button" data-gallery="baptême" type="button">
+     Baptême
+    </button>
+    <!-- Ajoutez un bouton pour chaque galerie -->
+   </div>
+  </div>
+  <div class="container">
+   <div class="row gallery justify-content-center" id="all-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-1" data-title="image-1" href="Asset/images/mariage/marriage-636018_1280.jpg">       
+      <img alt="Description de l'image" class="img-fluid shadow-lg" src="Asset/images/mariage/marriage-636018_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
     </div>
-    <div class="container">
-        <div id="all-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/mariage/marriage-636018_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/mariage/marriage-636018_1280.jpg" class="img-fluid shadow-lg"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="famille-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a class="famille-gallery"  href="Asset/images/Famille/team-spirit-2447163_1280.jpg" data-lightbox="mains équipe"
-                    data-title="mains équipe">
-                    <img src="Asset/images/Famille/team-spirit-2447163_1280.jpg" class="img-fluid"
-                        alt="L'image montre deux enfants">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Famille/brother-1252735_1280.jpg" data-lightbox="image-1"
-                    data-title="description">
-                    <img src="Asset/images/Famille/brother-1252735_1280.jpg" class="img-fluid"
-                        alt="L'image montre trois personnes debout près l'une de l'autre dans une étreinte amicale.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Famille/family-2610205_1280.jpg" data-lightbox="image-1"
-                    data-title="description">
-                    <img src="Asset/images/Famille/family-2610205_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Famille/friendship-day-3104635_1280.jpg" data-lightbox="image-1"
-                    data-title="description">
-                    <img src="Asset/images/Famille/friendship-day-3104635_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded -5 ">
-                            <i class= "fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class= "mt -1 ">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class= "col-sm -6 col-md -4 col-lg -3 m -3 image-container bg-dark ">
-                <a href= "Asset/images/Famille/mama-5098862_1280.jpg " data-lightbox= "image -1 "
-                    data-title= "description ">
-                    <img src= "Asset/images/Famille/mama-5098862_1280.jpg "  class= "img-fluid "
-                        alt= "Description de l'image ">
-                    <div class= "lightbox-content ">
-                        <button class= "cart-button btn btn-info  rounded -5 ">
-                            <i class= "fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class= "mt -1 ">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class= "col-sm -6 col-md -4 col-lg -3 m -3 image-container bg-dark ">
-                <a href= "Asset/images/Famille/mother-2935723 _1280.jpg " data-lightbox= "image -1 "
-                    data-title= "description ">
-                    <img src= "Asset/images/Famille/mother-2935723_1280.jpg " class= "img-fluid "
-                        alt= "Description de l'image ">
-                    <div class= "lightbox-content ">
-                        <button class= "cart-button btn btn-info  rounded -5 ">
-                            <i class= "fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class= "mt -1 ">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-        <div id="mariage-gallery" class="row gallery justify-content-center bg-dark  " style="display: none;">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a id="coupleAssis" href="Asset/images/mariage/couple-260899_1280.jpg" data-lightbox="image-1"
-                    data-title="photo réaliste d’un couple assis sur un banc dans un parc avec un grand manoir en arrière-plan. Le couple est assis proche l’un de l’autre et la femme tient un bouquet de fleurs. Le manoir est un grand bâtiment orné avec un toit rouge et des murs blancs. Le parc est rempli d’arbres et de fleurs, et il y a un chemin qui mène au manoir. L’image a une ambiance chaleureuse et romantique">
-                    <img src="Asset/images/mariage/couple-260899_1280.jpg" class="img-fluid"
-                        alt=" photo réaliste d’un couple assis sur un banc dans un parc avec un grand manoir en arrière-plan. Le couple est assis proche l’un de l’autre et la femme tient un bouquet de fleurs. Le manoir est un grand bâtiment orné avec un toit rouge et des murs blancs. Le parc est rempli d’arbres et de fleurs, et il y a un chemin qui mène au manoir. L’image a une ambiance chaleureuse et romantique.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">couple assis sur un banc</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/couple-443600_1280.jpg" data-lightbox="image-1"
-                    data-title="il s’agit d’une photo réaliste d’un couple dansant dans une forêt. Le couple porte des vêtements de mariage, la mariée porte une robe blanche et le marié porte un costume noir. La mariée porte une couronne de fleurs sur la tête. Le couple danse sur un chemin de terre avec des arbres de chaque côté. Il y a un panier de pique-nique sur le côté droit de l’image. Le fond est composé d’arbres et de feuillages">
-                    <img src="Asset/images/mariage/couple-443600_1280.jpg" class="img-fluid"
-                        alt="il s’agit d’une photo réaliste d’un couple dansant dans une forêt. Le couple porte des vêtements de mariage, la mariée porte une robe blanche et le marié porte un costume noir. La mariée porte une couronne de fleurs sur la tête. Le couple danse sur un chemin de terre avec des arbres de chaque côté. Il y a un panier de pique-nique sur le côté droit de l’image. Le fond est composé d’arbres et de feuillages.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">couple dansant dans une forêt</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/heart-529607_640.jpg" data-lightbox="image-1"
-                    data-title="il s’agit d’une photo réaliste des mains de la mariée et du marié formant un cœur sur la robe de mariée blanche de la mariée. Les mains de la mariée sont couvertes de gants en dentelle blanche. Les mains du marié sont couvertes d’un costume noir. L’arrière-plan est une pelouse verte floue.">
-                    <img src="Asset/images/mariage/heart-529607_640.jpg" class="img-fluid"
-                        alt=" il s’agit d’une photo réaliste des mains de la mariée et du marié formant un cœur sur la robe de mariée blanche de la mariée. Les mains de la mariée sont couvertes de gants en dentelle blanche. Les mains du marié sont couvertes d’un costume noir. L’arrière-plan est une pelouse verte floue.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">mains de la mariée et du marié formant un cœur sur la robe de mariée</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/love-2587456_1280.jpg" data-lightbox="image-1"
-                    data-title="il s’agit d’une photo réaliste un couple est debout l’un à côté de l’autre, la tête inclinée l’un vers l’autre. La femme porte une robe blanche avec une couronne de fleurs sur la tête. L’homme porte une chemise à carreaux noire et blanche. L’arrière-plan est un paysage flou avec un plan d’eau et des arbres.">
-                    <img src="Asset/images/mariage/love-2587456_1280.jpg" class="img-fluid"
-                        alt=" il s’agit d’une photo réaliste un couple est debout l’un à côté de l’autre, la tête inclinée l’un vers l’autre. La femme porte une robe blanche avec une couronne de fleurs sur la tête. L’homme porte une chemise à carreaux noire et blanche. L’arrière-plan est un paysage flou avec un plan d’eau et des arbres.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">couple est debout l’un à côté de l’autre</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/marriage-636018_1280.jpg" data-lightbox="image-1"
-                    data-title="il s’agit d’une photo de la partie inférieure d’un couple de mariés debout sur un sol carrelé noir et blanc. Le marié porte un pantalon noir et des baskets Converse noires. La mariée porte une robe de mariée blanche avec des détails en dentelle et des baskets Converse roses. L’arrière-plan est constitué d’une rambarde en métal et d’une vue floue d’une pièce avec de grandes fenêtres.">
-                    <img src="Asset/images/mariage/marriage-636018_1280.jpg" class="img-fluid"
-                        alt="il s’agit d’une photo de la partie inférieure d’un couple de mariés debout sur un sol carrelé noir et blanc. Le marié porte un pantalon noir et des baskets Converse noires. La mariée porte une robe de mariée blanche avec des détails en dentelle et des baskets Converse roses. L’arrière-plan est constitué d’une rambarde en métal et d’une vue floue d’une pièce avec de grandes fenêtres.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">couple de mariés debout sur un sol carrelé noir et blanc</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/pink-wine-1964457_1280.jpg" data-lightbox="image-1"
-                    data-title="il s’agit d’une photo réaliste d’un arrangement de table romantique avec une bouteille de vin et trois verres. La table est recouverte d’une nappe rose et est éclairée d’une lumière rose. La bouteille de vin est un rosé avec un ruban bleu attaché autour. L’étiquette indique “La Vie en Rose”. Les verres sont grands et minces avec une bordure dorée. Ils sont remplis d’un liquide rose. Il y a un vase de roses rouges en arrière-plan. L’arrière-plan est constitué d’un mur rose avec des lumières blanches.">
-                    <img src="Asset/images/mariage/pink-wine-1964457_1280.jpg" class="img-fluid"
-                        alt=" il s’agit d’une photo réaliste d’un arrangement de table romantique avec une bouteille de vin et trois verres. La table est recouverte d’une nappe rose et est éclairée d’une lumière rose. La bouteille de vin est un rosé avec un ruban bleu attaché autour. L’étiquette indique “La Vie en Rose”. Les verres sont grands et minces avec une bordure dorée. Ils sont remplis d’un liquide rose. Il y a un vase de roses rouges en arrière-plan. L’arrière-plan est constitué d’un mur rose avec des lumières blanches.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">arrangement de table romantique avec une bouteille de vin et trois verres.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/sunset-698501_1280.jpg" data-lightbox="image-1"
-                    data-title="Un couple amoureux se tient la main sur la plage au coucher du soleil.">
-                    <img src="Asset/images/mariage/sunset-698501_1280.jpg" class="img-fluid"
-                        alt="Un couple amoureux se tient la main sur la plage au coucher du soleil.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">Un couple amoureux se tient la main sur la plage au coucher du soleil.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/wedding-1867547_1280.jpg" data-lightbox="image-1"
-                    data-title="Un couple enlacé dans un jardin fleuri, capturé dans un moment d’amour éternel. Leur amour est aussi pur que la robe de la femme et aussi profond que le costume sombre de l’homme. Ils sont entourés de la beauté de la nature, symbolisant leur amour florissant. Le flou du visage de l’homme ajoute une touche de mystère à cette scène romantique.">
-                    <img src="Asset/images/mariage/wedding-1867547_1280.jpg" class="img-fluid"
-                        alt="Un couple enlacé dans un jardin fleuri, capturé dans un moment d’amour éternel. Leur amour est aussi pur que la robe de la femme et aussi profond que le costume sombre de l’homme. Ils sont entourés de la beauté de la nature, symbolisant leur amour florissant. Le flou du visage de l’homme ajoute une touche de mystère à cette scène romantique.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">Un couple enlacé dans un jardin fleuri</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/wedding-dress-1486260_1280.jpg" data-lightbox="image-1"
-                    data-title="Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de roses roses et blanches. Sa robe sans bretelles avec un décolleté en cœur et une jupe volumineuse symbolise l’élégance et la beauté. Le flou de son visage ajoute une touche de mystère à cette image. Le fond sombre et texturé met en valeur la pureté de sa robe et la vivacité de son bouquet.">
-                    <img src="Asset/images/mariage/wedding-dress-1486260_1280.jpg" class="img-fluid"
-                        alt="Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de roses roses et blanches. Sa robe sans bretelles avec un décolleté en cœur et une jupe volumineuse symbolise l’élégance et la beauté. Le flou de son visage ajoute une touche de mystère à cette image. Le fond sombre et texturé met en valeur la pureté de sa robe et la vivacité de son bouquet.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de
-                            roses roses et blanches.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/wedding-dresses-1486005_1280.jpg" data-lightbox="image-1"
-                    data-title="“Une mariée en robe blanche, debout devant une fenêtre haute, regarde au loin. La lumière diffuse à travers les rideaux blancs illumine la pièce, mettant en valeur la robe de bal volumineuse de la femme. Le mur orné et la plaque gravée ajoutent une touche d’élégance à la scène. Dans ce moment de calme et de rêverie, quels sont les pensées et les espoirs de la mariée pour l’avenir ">
-                    <img src="Asset/images/mariage/wedding-dresses-1486005_1280.jpg" class="img-fluid"
-                        alt="“Une mariée en robe blanche, debout devant une fenêtre haute, regarde au loin. La lumière diffuse à travers les rideaux blancs illumine la pièce, mettant en valeur la robe de bal volumineuse de la femme. Le mur orné et la plaque gravée ajoutent une touche d’élégance à la scène. Dans ce moment de calme et de rêverie, quels sont les pensées et les espoirs de la mariée pour l’avenir ">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">Une mariée en robe blanche, debout devant une fenêtre haute, regarde au loin.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
-                <a href="Asset/images/mariage/wedding-dresses-1486256_1280.jpg" data-lightbox="image-1"
-                    data-title="Dans un éclat de lumière douce et dorée, une mariée en robe blanche se tient debout, son visage net pour préserver son intimité. Sa robe sans bretelles, au décolleté en cœur, est complétée par un voile long et délicat orné de dentelle. Un bracelet décore son poignet gauche, ajoutant une touche d’élégance à sa tenue. Derrière elle, un flou artistique révèle des arbres baignés de soleil. Quelle histoire pourrait naître de cette image ? Quels sont les rêves et les espoirs de cette mariée en ce jour si spécial ?”">
-                    <img src="Asset/images/mariage/wedding-dresses-1486256_1280.jpg" class="img-fluid"
-                        alt="Dans un éclat de lumière douce et dorée, une mariée en robe blanche se tient debout, son visage flou pour préserver son intimité. Sa robe sans bretelles, au décolleté en cœur, est complétée par un voile long et délicat orné de dentelle. Un bracelet décore son poignet gauche, ajoutant une touche d’élégance à sa tenue. Derrière elle, un flou artistique révèle des arbres baignés de soleil. Quelle histoire pourrait naître de cette image ? Quels sont les rêves et les espoirs de cette mariée en ce jour si spécial ?”">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">une mariée en robe blanche se tient debout</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="couple-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/black-and-white-2590810_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/black-and-white-2590810_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/bride-1355473_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/bride-1355473_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/couple-4615557_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/couple-4615557_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/romantic-1934223_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/romantic-1934223_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/man-2425121_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/man-2425121_1280.jpg" class="img-fluid" alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Couple/woman-1979272_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Couple/woman-1979272_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div id="Grossesse-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/girl-18918_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/girl-18918_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/maternity-7890354_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/maternity-7890354_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/pregnancy-2221950_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/pregnancy-2221950_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/pregnant-6189040_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/pregnant-6189040_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/pregnant-775036_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/pregnant-775036_1280.jpg" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Grossesse/woman-358779_1280.png" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Grossesse/woman-358779_1280.png" class="img-fluid"
-                        alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="bébé-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Bébé/infant-2717347_1280.jpg" data-lightbox="bébé avec un chapeau"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Bébé/infant-2717347_1280.jpg" class="img-fluid" alt="bébé avec un chapeau">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Bébé/baby-1151351_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Bébé/baby-1151351_1280.jpg" class="img-fluid" alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Bébé/baby-1399332_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Bébé/baby-1399332_1280.jpg" class="img-fluid" alt="Description de l'image">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Bébé/baby-2416718_1280.jpg" data-lightbox="image-1"
-                    data-title="Description de l'image">
-                    <img src="Asset/images/Bébé/baby-2416718_1280.jpg" class="img-fluid"
-                                alt="Description de l'image">
-                            <div class="lightbox-content">
-                                <button class="cart-button btn btn-info  rounded-5">
-                                    <i class="fa fa-shopping-cart"></i> Ajouter
-                                </button>
-                                <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                        <a href="Asset/images/Bébé/brothers-457234_1280.jpg" data-lightbox="image-1"
-                            data-title="Description de l'image">
-                            <img src="Asset/images/Bébé/brothers-457234_1280.jpg" class="img-fluid"
-                                alt="Description de l'image">
-                            <div class="lightbox-content">
-                                <button class="cart-button btn btn-info  rounded-5 ">
-                                    <i class= "fa fa-shopping-cart"></i> Ajouter
-                                </button>
-                                <p class= "mt-1 ">CLICK POUR AGRANDIR L'IMAGE</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class= "col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark ">
-                        <a href= "Asset/images/Bébé/father-22194_1280.jpg " data-lightbox= "image-1 "
-                            data-title= "description ">
-                            <img src= "Asset/images/Bébé/father-22194_1280.jpg " class= "img-fluid "
-                                alt= "Description de l'image ">
-                            <div class= "lightbox-content ">
-                                <button class= "cart-button btn btn-info  rounded-5 ">
-                                    <i class= "fa fa-shopping-cart"></i> Ajouter
-                                </button>
-                                <p class= "mt-1 ">CLICK POUR AGRANDIR L'IMAGE</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-        <div id="baptême-gallery" class="row gallery justify-content-center">
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Baptême/baptism-644267_1280.jpg" data-lightbox="image-1"
-                    data-title="Une cérémonie de baptême dans une église. On y voit un bébé qui est baptisé avec de l'eau provenant d'une carafe en verre. Le bébé est tenu par une femme, qui se tient à côté d'un homme. Le baptême est effectué par une personne vêtue de robes blanches. L'arrière-plan se compose d'un mur de briques et d'un autel en bois.">
-                    <img src="Asset/images/Baptême/baptism-644267_1280.jpg" class="img-fluid" alt="Une cérémonie de baptême dans une église">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Baptême/bird-3058712_1280.jpg" data-lightbox="image-2"
-                    data-title="Une cigogne volant dans le ciel avec un paquet blanc dans son bec. La cigogne vole de gauche à droite avec ses ailes déployées. La cigogne est blanche avec des plumes noires sur ses ailes et sa queue. Le paquet dans son bec est blanc et en forme de larme. L'arrière-plan est un ciel bleu avec des nuages blancs.">
-                    <img src="Asset/images/Baptême/bird-3058712_1280.jpg" class="img-fluid" alt="ne cigogne volant dans le ciel avec un paquet blanc">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Baptême/dew-638110_1280.jpg" data-lightbox="image-3"
-                    data-title="Un bébé en train d'être baptisé. Le bébé est tenu au-dessus d'une fontaine baptismale en verre contenant de l'eau. Le bébé porte une robe et un bonnet blancs. La tête du bébé est tenue par une main et de l'eau est versée sur la tête du bébé. La personne qui effectue le baptême porte une robe verte et blanche. L'arrière-plan est un panneau en bois.">
-                    <img src="Asset/images/Baptême/dew-638110_1280.jpg" class="img-fluid"
-                        alt="Un bébé en train d'être baptisé.">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Baptême/man-417583_1280.jpg" data-lightbox="image-4"
-                    data-title="Une personne debout dans une piscine baptismale. La personne porte une robe blanche et se tient devant une croix jaune. La piscine est remplie d'eau et est située sur une terrasse en bois avec une clôture en treillis blanc en arrière-plan.">
-                    <img src="Asset/images/Baptême/man-417583_1280.jpg" class="img-fluid"
-                        alt="Une personne debout dans une piscine">
-                    <div class="lightbox-content">
-                        <button class="cart-button btn btn-info  rounded-5">
-                            <i class="fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class="mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
-                <a href="Asset/images/Baptême/man-3672010_1280.jpg" data-lightbox="image-5"
-                    data-title="Un photographe en train de prendre une photo d'un bâtiment. Le photographe porte une casquette de baseball verte et un t-shirt gris. Il utilise un appareil photo DSLR monté sur un trépied. Le bâtiment en arrière-plan est en pierre et a des fenêtres en arc. Le photographe se tient sur un balcon avec une balustrade noire.">
-                    <img src="Asset/images/Baptême/man-3672010_1280.jpg" class= "img-fluid"alt= "Un photographe en train de prendre une photo">
-                    <div class= "lightbox-content">
-                        <button class= "cart-button btn btn-info  rounded -5 ">
-                            <i class= "fa fa-shopping-cart"></i> Ajouter
-                        </button>
-                        <p class= "mt-1">CLICK POUR AGRANDIR L'IMAGE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
+   </div>
+   <div class="row gallery justify-content-center" id="famille-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a class="famille-gallery" data-lightbox="Cette photo montre un groupe de mains se tenant en" data-title="Cette photo montre un groupe de mains se tenant en cercle. Les mains sont de différentes tailles et teintes de peau. Certaines des mains ont des bagues aux doigts. L'arrière-plan est un champ herbeux." href="Asset/images/Famille/team-spirit-2447163_1280.jpg">
+      <img alt="groupe de mains se tenant en cercle." class="img-fluid" src="Asset/images/Famille/team-spirit-2447163_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        groupe de mains se tenant
+       </p>
+      </div>
+     </a>
     </div>
-    <div id="footer"></div>
-    <script src="/Asset/persojs/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-   <script src="Asset/persojs/textDefile.js"></script>
-   <script src="Asset/persojs/javascript.js"></script>
-   <script src="Asset/persojs/cacheFormNavbar.js"></script>
-</body>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="deux enfants" data-title="deux enfants" href="Asset/images/Famille/brother-1252735_1280.jpg">
+      <img alt="deux enfants dans ce qui semble être un parc ou un jardin." class="img-fluid" src="Asset/images/Famille/brother-1252735_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        deux enfants
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-1" data-title="image-1" href="Asset/images/Famille/family-2610205_1280.jpg">        
+      <img alt="Description de l'image" class="img-fluid" src="Asset/images/Famille/family-2610205_1280.jpg"/>   
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-1" data-title="image-1" href="Asset/images/Famille/friendship-day-3104635_1280.jpg">
+      <img alt="Description de l'image" class="img-fluid" src="Asset/images/Famille/friendship-day-3104635_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded -5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt -1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm -6 col-md -4 col-lg -3 m -3 image-container bg-dark">
+     <a data-lightbox="image -1 " data-title="image -1 " href="Asset/images/Famille/mama-5098862_1280.jpg ">     
+      <img alt="Description de l'image " class="img-fluid" src="Asset/images/Famille/mama-5098862_1280.jpg "/>   
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded -5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt -1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm -6 col-md -4 col-lg -3 m -3 image-container bg-dark">
+     <a data-lightbox="image -1 " data-title="image -1 " href="Asset/images/Famille/mother-2935723 _1280.jpg ">  
+      <img alt="Description de l'image " class="img-fluid" src="Asset/images/Famille/mother-2935723_1280.jpg "/> 
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded -5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt -1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+   <div class="row gallery justify-content-center bg-dark" id="mariage-gallery" style="display: none;">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="photo réaliste d’un couple assis sur un banc dans un" data-title="photo réaliste d’un couple assis sur un banc dans un parc avec un grand manoir en arrière-plan. Le couple est assis proche l’un de l’autre et la femme tient un bouquet de fleurs. Le manoir est un grand bâtiment orné avec un toit rouge et des murs blancs. Le parc est rempli d’arbres et de fleurs, et il y a un chemin qui mène au manoir. L’image a une ambiance chaleureuse et romantique" href="Asset/images/mariage/couple-260899_1280.jpg" id="coupleAssis">
+      <img alt="photo réaliste d’un couple assis sur un banc dans un parc avec un grand manoir en arrière-plan." class="img-fluid" src="Asset/images/mariage/couple-260899_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        couple assis sur un banc
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="il s’agit d’une photo réaliste d’un couple dansant dans une" data-title="il s’agit d’une photo réaliste d’un couple dansant dans une forêt. Le couple porte des vêtements de mariage, la mariée porte une robe blanche et le marié porte un costume noir. La mariée porte une couronne de fleurs sur la tête. Le couple danse sur un chemin de terre avec des arbres de chaque côté. Il y a un panier de pique-nique sur le côté droit de l’image. Le fond est composé d’arbres et de feuillages" href="Asset/images/mariage/couple-443600_1280.jpg">
+      <img alt="il s’agit d’une photo réaliste d’un couple dansant dans une forêt. Le couple porte des vêtements de mariage, la mariée porte une robe blanche et le marié porte un costume noir. La mariée porte une couronne de fleurs sur la tête. Le couple danse sur un chemin de terre avec des arbres de chaque côté. Il y a un panier de pique-nique sur le côté droit de l’image. Le fond est composé d’arbres et de feuillages." class="img-fluid" src="Asset/images/mariage/couple-443600_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        couple dansant dans une forêt
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="il s’agit d’une photo réaliste des mains de la mariée" data-title="il s’agit d’une photo réaliste des mains de la mariée et du marié formant un cœur sur la robe de mariée blanche de la mariée. Les mains de la mariée sont couvertes de gants en dentelle blanche. Les mains du marié sont couvertes d’un costume noir. L’arrière-plan est une pelouse verte floue." href="Asset/images/mariage/heart-529607_640.jpg">
+      <img alt=" il s’agit d’une photo réaliste des mains de la mariée et du marié formant un cœur sur la robe de mariée blanche de la mariée. Les mains de la mariée sont couvertes de gants en dentelle blanche. Les mains du marié sont couvertes d’un costume noir. L’arrière-plan est une pelouse verte floue." class="img-fluid" src="Asset/images/mariage/heart-529607_640.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        mains de la mariée et du marié formant un cœur sur la robe de mariée
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="il s’agit d’une photo réaliste un couple est debout l’un" data-title="il s’agit d’une photo réaliste un couple est debout l’un à côté de l’autre, la tête inclinée l’un vers l’autre. La femme porte une robe blanche avec une couronne de fleurs sur la tête. L’homme porte une chemise à carreaux noire et blanche. L’arrière-plan est un paysage flou avec un plan d’eau et des arbres." href="Asset/images/mariage/love-2587456_1280.jpg">
+      <img alt=" il s’agit d’une photo réaliste un couple est debout l’un à côté de l’autre, la tête inclinée l’un vers l’autre. La femme porte une robe blanche avec une couronne de fleurs sur la tête. L’homme porte une chemise à carreaux noire et blanche. L’arrière-plan est un paysage flou avec un plan d’eau et des arbres." class="img-fluid" src="Asset/images/mariage/love-2587456_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        couple est debout l’un à côté de l’autre
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="il s’agit d’une photo de la partie inférieure d’un couple" data-title="il s’agit d’une photo de la partie inférieure d’un couple de mariés debout sur un sol carrelé noir et blanc. Le marié porte un pantalon noir et des baskets Converse noires. La mariée porte une robe de mariée blanche avec des détails en dentelle et des baskets Converse roses. L’arrière-plan est constitué d’une rambarde en métal et d’une vue floue d’une pièce avec de grandes fenêtres." href="Asset/images/mariage/marriage-636018_1280.jpg">
+      <img alt="il s’agit d’une photo de la partie inférieure d’un couple de mariés debout sur un sol carrelé noir et blanc. Le marié porte un pantalon noir et des baskets Converse noires. La mariée porte une robe de mariée blanche avec des détails en dentelle et des baskets Converse roses. L’arrière-plan est constitué d’une rambarde en métal et d’une vue floue d’une pièce avec de grandes fenêtres." class="img-fluid" src="Asset/images/mariage/marriage-636018_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        couple de mariés debout sur un sol carrelé noir et blanc
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="il s’agit d’une photo réaliste d’un arrangement de table romantique" data-title="il s’agit d’une photo réaliste d’un arrangement de table romantique avec une bouteille de vin et trois verres. La table est recouverte d’une nappe rose et est éclairée d’une lumière rose. La bouteille de vin est un rosé avec un ruban bleu attaché autour. L’étiquette indique “La Vie en Rose”. Les verres sont grands et minces avec une bordure dorée. Ils sont remplis d’un liquide rose. Il y a un vase de roses rouges en arrière-plan. L’arrière-plan est constitué d’un mur rose avec des lumières blanches." href="Asset/images/mariage/pink-wine-1964457_1280.jpg">
+      <img alt=" il s’agit d’une photo réaliste d’un arrangement de table romantique avec une bouteille de vin et trois verres. La table est recouverte d’une nappe rose et est éclairée d’une lumière rose. La bouteille de vin est un rosé avec un ruban bleu attaché autour. L’étiquette indique “La Vie en Rose”. Les verres sont grands et minces avec une bordure dorée. Ils sont remplis d’un liquide rose. Il y a un vase de roses rouges en arrière-plan. L’arrière-plan est constitué d’un mur rose avec des lumières blanches." class="img-fluid" src="Asset/images/mariage/pink-wine-1964457_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        arrangement de table romantique avec une bouteille .
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="image-1" data-title="Un couple amoureux se tient la main sur la plage au coucher du soleil." href="Asset/images/mariage/sunset-698501_1280.jpg">
+      <img alt="Un couple amoureux se tient la main sur la plage au coucher du soleil." class="img-fluid" src="Asset/images/mariage/sunset-698501_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Un couple amoureux se tient la main sur la plage au coucher du soleil.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="Un couple enlacé dans un jardin fleuri, capturé dans un" data-title="Un couple enlacé dans un jardin fleuri, capturé dans un moment d’amour éternel. Leur amour est aussi pur que la robe de la femme et aussi profond que le costume sombre de l’homme. Ils sont entourés de la beauté de la nature, symbolisant leur amour florissant. Le flou du visage de l’homme ajoute une touche de mystère à cette scène romantique." href="Asset/images/mariage/wedding-1867547_1280.jpg">
+      <img alt="Un couple enlacé dans un jardin fleuri, capturé dans un moment d’amour éternel. Leur amour est aussi pur que la robe de la femme et aussi profond que le costume sombre de l’homme. Ils sont entourés de la beauté de la nature, symbolisant leur amour florissant. Le flou du visage de l’homme ajoute une touche de mystère à cette scène romantique." class="img-fluid" src="Asset/images/mariage/wedding-1867547_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Un couple enlacé dans un jardin fleuri
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="Une mariée éblouissante dans une robe de mariée blanche, tenant" data-title="Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de roses roses et blanches. Sa robe sans bretelles avec un décolleté en cœur et une jupe volumineuse symbolise l’élégance et la beauté. Le flou de son visage ajoute une touche de mystère à cette image. Le fond sombre et texturé met en valeur la pureté de sa robe et la vivacité de son bouquet." href="Asset/images/mariage/wedding-dress-1486260_1280.jpg">
+      <img alt="Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de roses roses et blanches. Sa robe sans bretelles avec un décolleté en cœur et une jupe volumineuse symbolise l’élégance et la beauté. Le flou de son visage ajoute une touche de mystère à cette image. Le fond sombre et texturé met en valeur la pureté de sa robe et la vivacité de son bouquet." class="img-fluid" src="Asset/images/mariage/wedding-dress-1486260_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Une mariée éblouissante dans une robe de mariée blanche, tenant un bouquet de
+                            roses roses et blanches.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="Une mariée en robe blanche, debout devant une fenêtre haute," data-title="Une mariée en robe blanche, debout devant une fenêtre haute, regarde au loin. La lumière diffuse à travers les rideaux blancs illumine la pièce, mettant en valeur la robe de bal volumineuse de la femme. Le mur orné et la plaque gravée ajoutent une touche d’élégance à la scène. Dans ce moment de calme et de rêverie, quels sont les pensées et les espoirs de la mariée pour l’avenir " href="Asset/images/mariage/wedding-dresses-1486005_1280.jpg">
+      <img alt="Une mariée en robe blanche, debout devant une fenêtre haute, regarde au loin. La lumière diffuse à travers les rideaux blancs illumine la pièce, mettant en valeur la robe de bal volumineuse de la femme. Le mur orné et la plaque gravée ajoutent une touche d’élégance à la scène. Dans ce moment de calme et de rêverie, quels sont les pensées et les espoirs de la mariée pour l’avenir " class="img-fluid" src="Asset/images/mariage/wedding-dresses-1486005_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Une mariée en robe blanche, debout devant une fenêtre haute.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container">
+     <a data-lightbox="Dans un éclat de lumière douce et dorée, une mariée" data-title="Dans un éclat de lumière douce et dorée, une mariée en robe blanche se tient debout, son visage net pour préserver son intimité. Sa robe sans bretelles, au décolleté en cœur, est complétée par un voile long et délicat orné de dentelle. Un bracelet décore son poignet gauche, ajoutant une touche d’élégance à sa tenue. Derrière elle, un flou artistique révèle des arbres baignés de soleil. Quelle histoire pourrait naître de cette image ? Quels sont les rêves et les espoirs de cette mariée en ce jour si spécial " href="Asset/images/mariage/wedding-dresses-1486256_1280.jpg">
+      <img alt="Dans un éclat de lumière douce et dorée, une mariée en robe blanche se tient debout, son visage flou pour préserver son intimité. Sa robe sans bretelles, au décolleté en cœur, est complétée par un voile long et délicat orné de dentelle. Un bracelet décore son poignet gauche, ajoutant une touche d’élégance à sa tenue. Derrière elle, un flou artistique révèle des arbres baignés de soleil. Quelle histoire pourrait naître de cette image ? Quels sont les rêves et les espoirs de cette mariée en ce jour si spécial ?”" class="img-fluid" src="Asset/images/mariage/wedding-dresses-1486256_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une mariée en robe blanche se tient debout
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+   <div class="row gallery justify-content-center" id="couple-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo en noir et blanc représente un homme et" data-title="Cette photo en noir et blanc représente un homme et une femme en train de s’embrasser. L’homme porte un pull de couleur claire et la femme porte une robe à motifs. L’arrière-plan est composé d’une rue avec des maisons et une voiture.
 
+                " href="Asset/images/Couple/black-and-white-2590810_1280.jpg">
+      <img alt="Cette photo en noir et blanc représente un homme et une femme en train de s’embrasser.
+
+                        " class="img-fluid" src="Asset/images/Couple/black-and-white-2590810_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un homme et une femme en train de s’embrasser.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente une femme dont les cheveux sont coiffés" data-title="Cette photo représente une femme dont les cheveux sont coiffés en chignon avec des fleurs blanches éparpillées. Elle tient un bouquet de roses rouges et blanches. L’arrière-plan, flou, semble être un jardin ou un parc." href="Asset/images/Couple/bride-1355473_1280.jpg">
+      <img alt="Cette photo représente une femme dont les cheveux sont coiffés en chignon avec des fleurs blanches éparpillées." class="img-fluid" src="Asset/images/Couple/bride-1355473_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une femme dont les cheveux sont coiffés
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo montre deux mains se tenant par le petit" data-title="Cette photo montre deux mains se tenant par le petit doigt. Les mains ont des tatouages assortis d'ancres sur leurs petits doigts. Une main porte une bague en or à l'annulaire. L'autre main porte une montre noire au poignet. L'arrière-plan, flou, semble être un paysage verdoyant." href="Asset/images/Couple/couple-4615557_1280.jpg">
+      <img alt="Cette photo montre deux mains se tenant par le petit doigt." class="img-fluid" src="Asset/images/Couple/couple-4615557_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        deux mains se tenant par le petit doigt.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un couple assis sur l’herbe, dos à" data-title="Cette photo représente un couple assis sur l’herbe, dos à la caméra. La femme porte une robe rouge et l’homme porte une chemise bleu marine. Le couple semble se trouver dans un parc ou une zone boisée avec des arbres en arrière-plan. La photo a une faible profondeur de champ avec l’arrière-plan flou." href="Asset/images/Couple/romantic-1934223_1280.jpg">  
+      <img alt="Cette photo représente un couple assis sur l’herbe, dos à la caméra." class="img-fluid" src="Asset/images/Couple/romantic-1934223_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        représente un couple assis sur l’herbe
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente deux personnes assises sur un banc en" data-title="Cette photo représente deux personnes assises sur un banc en bois avec un chien entre elles. Le banc est fait de planches de bois et a un aspect rustique. Les personnes tiennent des tasses blanches et sont habillées de vêtements chauds. Le chien est de petite race avec un pelage brun clair et regarde l’appareil photo. Il y a des oreillers et des couvertures sur le banc, ce qui suggère une atmosphère confortable et douillette. L’arrière-plan est composé d’un mur en bois et d’une plante." href="Asset/images/Couple/man-2425121_1280.jpg">
+      <img alt="Cette photo représente deux personnes assises sur un banc en bois avec un chien entre elles. " class="img-fluid" src="Asset/images/Couple/man-2425121_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        représente deux personnes assises sur un banc
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un couple qui cuisine ensemble dans une" data-title="Cette photo représente un couple qui cuisine ensemble dans une cuisine. Le couple est debout à un comptoir de cuisine avec divers ustensiles de cuisine et ingrédients. La femme porte une blouse florale rose et l’homme porte une chemise grise à boutons. La femme remue un pot de pâtes avec une cuillère en bois et l’homme coupe des légumes. Il y a divers ingrédients et ustensiles de cuisine sur le comptoir, y compris une planche à découper, un couteau, un pot de pâtes, une poêle et un verre de vin. L’arrière-plan est composé d’une cuisine moderne avec des appareils en acier inoxydable et une fenêtre." href="Asset/images/Couple/woman-1979272_1280.jpg">
+      <img alt="Cette photo représente un couple qui cuisine ensemble dans une cuisine." class="img-fluid" src="Asset/images/Couple/woman-1979272_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        couple qui cuisine ensemble dans une cuisine.
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+   <div class="row gallery justify-content-center" id="Grossesse-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-1" data-title="image-1" href="Asset/images/Grossesse/girl-18
+     918_1280.jpg">
+      <img alt="Description de l'image" class="img-fluid" src="Asset/images/Grossesse/girl-18918_1280.jpg"/>     
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        CLICK POUR AGRANDIR L'IMAGE
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un couple dans un parc. Le couple" data-title="Cette photo représente un couple dans un parc. Le couple est debout, proche l’un de l’autre, et l’homme embrasse le front de la femme. La femme est enceinte et l’homme a sa main sur son ventre. L’arrière-plan est un parc avec des arbres et un gazebo blanc. La photo est prise pendant la journée et l’éclairage est naturel." href="Asset/images/Grossesse/maternity-7890354_1280.jpg">
+      <img alt="Cette photo représente un couple dans un parc." class="img-fluid" src="Asset/images/Grossesse/maternity-7890354_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un couple dans un parc.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente une personne debout dans l’océan. La personne" data-title="Cette photo représente une personne debout dans l’océan. La personne porte une robe blanche et se tient dans l’eau jusqu’à la taille. L’océan est d’une couleur bleu profond et le ciel est d’une couleur bleu clair. La personne tient son ventre et semble être enceinte. L’arrière-plan est composé de la ligne d’horizon et de l’océan" href="Asset/images/Grossesse/pregnancy-2221950_1280.jpg">
+      <img alt="Cette photo représente une personne debout dans l’océan" class="img-fluid" src="Asset/images/Grossesse/pregnancy-2221950_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une personne debout dans l’océan.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un ventre de femme enceinte avec des" data-title="Cette photo représente un ventre de femme enceinte avec des chaussettes de bébé dessus. Le ventre est nu et la peau est de couleur pêche claire. Les chaussettes sont blanches avec un visage d'ours dessus. L'arrière-plan est d'une couleur beige douce. La main de la personne repose sur le ventre." href="Asset/images/Grossesse/pregnant-6189040_1280.jpg">   
+      <img alt="Cette photo représente un ventre de femme enceinte " class="img-fluid" src="Asset/images/Grossesse/pregnant-6189040_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un ventre de femme enceinte
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un enfant en train d'étreindre la taille" data-title="Cette photo représente un enfant en train d'étreindre la taille d'une personne. La personne porte un jean bleu et un haut noir avec un ourlet à volants. L'arrière-plan est blanc." href="Asset/images/Grossesse/pregnant-775036_1280.jpg">    
+      <img alt="Cette photo représente un enfant en train d'étreindre la taille d'une personne." class="img-fluid" src="Asset/images/Grossesse/pregnant-775036_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un enfant en train d'étreindre la taille d'une personne.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente une femme enceinte assise sur un banc." data-title="Cette photo représente une femme enceinte assise sur un banc. La photo est prise de côté. La femme porte un débardeur bleu et un pantalon gris. L’arrière-plan, flou, semble être un parc ou un espace extérieur." href="Asset/images/Grossesse/woman-358779_1280.png">
+      <img alt="Cette photo représente une femme enceinte assise sur un banc." class="img-fluid" src="Asset/images/Grossesse/woman-358779_1280.png"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une femme enceinte assise sur un banc.
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+   <div class="row gallery justify-content-center" id="bébé-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="les pieds d’un bébé tenus par deux mains d’adulte. " data-title="les pieds d’un bébé tenus par deux mains d’adulte. " href="Asset/images/Bébé/infant-2717347_1280.jpg">
+      <img alt="Cette photo en noir et blanc représente les pieds d’un bébé tenus par deux mains d’adulte." class="img-fluid" src="Asset/images/Bébé/infant-2717347_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        les pieds d’un bébé tenus par deux mains d’adulte.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="une personne allongée sur un lit" data-title="une personne allongée sur un lit" href="Asset/images/Bébé/baby-1151351_1280.jpg">
+      <img alt="Cette photo représente une personne allongée sur un lit avec un animal en peluche." class="img-fluid" src="Asset/images/Bébé/baby-1151351_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une personne allongée sur un lit
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un enfant tenant un chapeau" data-title="Cette photo représente un enfant tenant un chapeau" href="Asset/images/Bébé/baby-1399332_1280.jpg">
+      <img alt="Cette photo représente un enfant tenant un chapeau rayé rouge et noir sur son visage." class="img-fluid" src="Asset/images/Bébé/baby-1399332_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un enfant tenant un chapeau
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="bébé tenant le doigt d'un adulte" data-title="bébé tenant le doigt d'un adulte" href="Asset/images/Bébé/baby-2416718_1280.jpg">
+      <img alt="Cette photo est un gros plan de la main d'un bébé tenant le doigt d'un adulte." class="img-fluid" src="Asset/images/Bébé/baby-2416718_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        bébé tenant le doigt d'un adulte
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente un enfant embrassant un bébé sur un" data-title="Cette photo représente un enfant embrassant un bébé sur un banc blanc. Le banc est blanc et a une finition vieillie. L’enfant porte une chemise blanche et le bébé porte une grenouillère bleue et blanche. L’arrière-plan est une porte en bois avec une poignée de porte en laiton." href="Asset/images/Bébé/brothers-457234_1280.jpg">
+      <img alt="un enfant embrassant un bébé sur un banc blanc." class="img-fluid" src="Asset/images/Bébé/brothers-457234_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        un enfant embrassant un bébé
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Cette photo représente une personne dormant sur un lit. La" data-title="Cette photo représente une personne dormant sur un lit. La personne est couverte d'une couverture grise. L'arrière-plan est composé d'une image floue d'une personne. La photo est prise de côté." href="Asset/images/Bébé/father-22194_1280.jpg "> 
+      <img alt="personne dormant sur un lit. " class="img-fluid" src="Asset/images/Bébé/father-22194_1280.jpg "/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        une personne dormant sur un lit.
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+   <div class="row gallery justify-content-center" id="baptême-gallery">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-1" data-title="image-1" href="Asset/images/Baptême/baptism-644267_1280.jpg">        
+      <img alt="Une cérémonie de baptême dans une église" class="img-fluid" src="Asset/images/Baptême/baptism-644267_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Une cérémonie de baptême dans une église
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-2" data-title="ne cigogne volant dans le ciel avec un paquet blanc" href="Asset/images/Baptême/bird-3058712_1280.jpg">
+      <img alt="ne cigogne volant dans le ciel avec un paquet blanc" class="img-fluid" src="Asset/images/Baptême/bird-3058712_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        ne cigogne volant dans le ciel
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="image-3" data-title="Un bébé en train d'être baptisé." href="Asset/images/Baptême/dew-638110_1280.jpg">
+      <img alt="Un bébé en train d'être baptisé." class="img-fluid" src="Asset/images/Baptême/dew-638110_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Un bébé en train d'être baptisé.
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Une personne debout dans une piscine baptismale" data-title="Une personne debout dans une piscine baptismale" href="Asset/images/Baptême/man-417583_1280.jpg">
+      <img alt="Une personne debout dans une piscine" class="img-fluid" src="Asset/images/Baptême/man-417583_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded-5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Une personne debout dans une piscine baptismal
+       </p>
+      </div>
+     </a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3 m-3 image-container bg-dark">
+     <a data-lightbox="Un photographe en train de prendre une photo d'un bâtiment." data-title="Un photographe en train de prendre une photo d'un bâtiment." href="Asset/images/Baptême/man-3672010_1280.jpg">
+      <img alt="Un photographe en train de prendre une photo" class="img-fluid" src="Asset/images/Baptême/man-3672010_1280.jpg"/>
+      <div class="lightbox-content">
+       <button class="cart-button btn btn-info rounded -5">
+        <i class="fa fa-shopping-cart">
+        </i>
+        Ajouter
+       </button>
+       <p class="mt-1">
+        Un photographe en train de prendre une photo d'un bâtiment.
+       </p>
+      </div>
+     </a>
+    </div>
+   </div>
+  </div>
+  <div id="footer">
+  </div>
+  <script src="/Asset/persojs/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+  </script>
+  <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js">
+  </script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
+  </script>
+  <script src="Asset/persojs/textDefile.js">
+  </script>
+  <script src="Asset/persojs/javascript.js">
+  </script>
+  <script src="Asset/persojs/cacheFormNavbar.js">
+  </script>
+ </body>
 </html>
