@@ -7,8 +7,8 @@
     visibility: hidden;
 }
 
-#menuGalerie {
-   display: hidden;  
+body a .nav-link {
+  visibility: hidden;  
 }
 
 body.index-page #myForm  {

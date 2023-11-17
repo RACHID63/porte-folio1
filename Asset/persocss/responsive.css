@@ -15,12 +15,20 @@
     font-size: 5vw;
   }
 
+
   .carousel-inner {
-    width: 100%;
+    width: 149%;
     position: absolute;
-    top: 50vh;
-    left: -25vw;
+    top: 35vh;
+    left: -63vw;
   }
 
   
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #ddd;
+    text-transform: uppercase;
+  }
 }

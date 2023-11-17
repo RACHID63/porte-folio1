@@ -127,6 +127,32 @@ links.on("click", function() {
   $(this).addClass("active");
 });
 
+// bouton clignotant 3dgalerie
+
+$(function(){
+    setInterval(function(){
+        $('#dGallery a.btn').toggleClass('btn-primary btn-danger');
+    }, 2000); // Change la couleur toutes les secondes
+});
+
+
+
+
+
+
+// $(function(){
+//     var isPrimary = true;
+//     setInterval(function(){
+//         if(isPrimary){
+//             $('#dGallery .btn').removeClass('btn-primary').addClass('btn-danger');
+//         } else {
+//             $('#dGallery .btn').removeClass('btn-danger').addClass('btn-primary');
+//         }
+//         isPrimary = !isPrimary;
+//     }, 2000); // Change la couleur toutes les secondes
+// });
+
+
 
 
 
