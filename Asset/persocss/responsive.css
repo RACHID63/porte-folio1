@@ -1,28 +1,62 @@
-@media only screen and (min-width: 260px) and (max-width: 600px) {
+@media only screen and (min-width: 260px) and (max-width: 950px) {
   body {
-    width: 100vw;
+    width:auto;
     background-color: rgb(185, 69, 43);
   }
 
+  img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+  }
+
+  .banner_taital_main {
+    position: relative;
+    top: -5vh;
+    left: -16vw;
+    width: 0%;
+    float: left;
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 35%;
+    text-align: center;
+  }
+
+  .banner_taital {
+    width: fit-content;
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+    margin-left: 0px;
+    padding: 8px;
+    background-color: white;
+    height: 44px;
+    border-radius: 19px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+  }
+
+  
   #app {
     margin: 0;
     /* font-size: 400px; */
     position: absolute;
-    left: 10vw;
-    top: 35vh;
+    left: 13vw;
+    top: 60vh;
     text-align: center;
     text-align: center;
-    font-size: 5vw;
+    font-size: 8vw;
   }
-
 
   .carousel-inner {
     width: 149%;
     position: absolute;
-    top: 35vh;
+    top: 10vh;
     left: -63vw;
   }
-
   
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 3px 10px;
@@ -31,4 +65,54 @@
     color: #ddd;
     text-transform: uppercase;
   }
+
+  li.nav-item {
+    background-color: green;
+    width: 124px;
+  }
+
+
+
+  .prep_text {
+    background-color: brown;
+    text-transform: uppercase;
+    height: 57px;
+    margin: 26px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  #dGallery {
+    position: absolute;
+    left: 35vw;
+    top: 15vh;
+  }
+
+  /* page galerie */
+  div#boutonImage {
+    width: auto;
+    visibility: hidden;
+  }
+
+  .boxRight {
+    visibility: hidden;
+  }
+
+  #footer {
+    background-color: rgb(221, 101, 49);
+    height: 10px;
+  }
+
+  .nav-item {
+      background-color: green;
+      width: 100px;
+  }
+
+  #myForm {
+   background-color: green;
+   width: 275px;
+  }
+
 }
+

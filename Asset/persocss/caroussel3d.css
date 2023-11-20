@@ -120,3 +120,18 @@ body {
             transform: rotateY(0deg);
   }
 }
+
+/* bouton */
+.image-container {
+  position: relative;
+  display: inline-block; /* ou "block" si vous préférez */
+}
+
+.centered-button {
+  background: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* autres styles pour le bouton (couleurs, bordures, etc.) */
+}

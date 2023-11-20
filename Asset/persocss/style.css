@@ -174,10 +174,8 @@ body.index-page .search-form {
 }
 
 /* header section start */
-#app {
+.commonClass {
   margin: 0;
-  /* font-size: 400px; */
-  position: absolute;
   position: absolute;
   left: 3vw;
   top: 21vh;
@@ -197,10 +195,15 @@ body.index-page .search-form {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-
   animation: textclip 2s linear infinite;
 }
 
+
+#app1 {
+	position: relative;
+	top: 256px;
+	left: -647px;
+}
 
 .navbar-brand {
   float: none;
@@ -350,36 +353,6 @@ img#brand {
 .callnow_bt a:hover {
   color: #fefefd;
   background-color: rgb(100, 59, 50);
-}
-
-#banner_slider a.carousel-control-prev {
-  top: 14vh;
-  left: 0.18vw;
-  background: none;
-}
-
-#banner_slider a.carousel-control-next {
-  top: 14vh;
-  left: 22vw;
-  color: red;
-  background: none;
-}
-
-#banner_slider .carousel-control-next,
-#banner_slider .carousel-control-prev {
-  width: 55px;
-  height: 55px;
-  opacity: 1;
-  font-size: 16px;
-  color: red;
-  background-color: #efefef;
-}
-#banner_slider .carousel-control-next:focus,
-#banner_slider .carousel-control-next:hover,
-#banner_slider .carousel-control-prev:focus,
-#banner_slider .carousel-control-prev:hover {
-  color: #fefefd;
-  background-color: #4a4949;
 }
 
 footer {

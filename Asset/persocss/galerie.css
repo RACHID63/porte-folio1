@@ -13,7 +13,7 @@ h1 {
 }
 
 #boxButton {
-  width: 1800px;
+  width: auto;
 }
 
 button {
@@ -35,7 +35,7 @@ div#boutonImage {
 } /*# sourceMappingURL=gallerie.css.map */
 
 .btn {
-  border: solid 12px white;
+  border: solid 1px white;
   border-radius: 10px;
 }
 

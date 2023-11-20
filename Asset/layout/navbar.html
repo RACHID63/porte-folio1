@@ -1,52 +1,47 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top d-flex">
-    <div class="container-fluid">
-        <a class="navbar-brand ml-5" href="#">
-            <img src="../Asset/images/icones/logo.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-5">
-                <div class="d-flex align-items-center me-5">
-                    <li class="nav-item ">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li id="btnGalerie " class="nav-item">
-                        <a class="nav-link" href="galerie.html">Galerie/shop</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </div>
-                <!-- Menu  "Galerie" -->
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#s2" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        GALERIE
-                    </a>
-                    <ul class="dropdown-menu text-center text-light" aria-labelledby="navbarDropdown">
-                        <li data-gallery="all" ><a class="dropdown-item">Tout</a></li>
-                        <li data-gallery="famille"><a class="dropdown-item">Famille</a></li>
-                        <li data-gallery="mariage"><a class="dropdown-item">Mariage</a></li>
-                        <li data-gallery="couple"><a class="dropdown-item">Couple</a></li>
-                        <li data-gallery="Grossesse"><a class="dropdown-item">Grossesse</a></li>
-                        <li data-gallery="baptême"><a class="dropdown-item">Baptème</a></li>
-                    </ul>
-                </li>
-                
-                <!-- Menu  "Galerie" -->
-            </ul>
-            <form id="myForm" class="index-page d-flex me-5">
-                <input id="mySearch" class="form-control me-2" type="search" placeholder="image search" aria-label="Search">
-                <button id="" class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+<nav id="navbar"  class="navbar navbar-expand-lg fixed-top d-flex ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"> <img src="Asset/images/icones/logo (1).png" )alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 ms-5  mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html"> Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a id="btnGalerie" class="nav-link" href="galerie.html">Galerie/boutique</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          photos
+          </a>
+          <ul class="dropdown-menu">
+            <li data-gallery="all"><a class="dropdown-item">Tout</a></li>
+              <li data-gallery="famille"><a class="dropdown-item">Famille</a></li>
+              <li data-gallery="mariage"><a class="dropdown-item">Mariage</a></li>
+              <li data-gallery="couple"><a class="dropdown-item">Couple</a></li>
+              <li data-gallery="Grossesse"><a class="dropdown-item">Grossesse</a></li>
+              <li data-gallery="baptême"><a class="dropdown-item">Baptème</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form id="myForm"  class="index-page  d-flex" role="search">
+        <input  id="mySearch" class="form-control me-2" type="search" placeholder="recherche une image" aria-label="Search">
+        <button class="btn btn-outline-success text-light" type="submit">recherche</button>
+      </form>
     </div>
+  </div>
 </nav>

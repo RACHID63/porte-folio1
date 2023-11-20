@@ -135,6 +135,12 @@ document.onmousewheel = function(e) {
   init(1);
 };
 
-  
+
+// click button
+$(document).on('ready', function(){
+  $('.centered-button').on('click', function(){
+    window.location.href = 'galerie.html';
+  });
+});
 
 
