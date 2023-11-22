@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #040000;
+  /* background-image: url("Asset/images/famille/brother-1252735_1280.jpg"); */
   background-color: rgb(237, 131, 105);
 }
 
@@ -52,7 +53,7 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-image: url(Asset/images/Bébé/);
+  background-image: url(Asset/images/famille/brother-1252735_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -450,6 +451,14 @@ a:focus {
   position: relative;
   padding-left: 75px;
   background-color: #000000;
+}
+
+.img-box {
+	position: absolute;
+	top: 460px;
+	width: 56vw;
+	border: solid 1px;
+	border-radius: -33px;
 }
 
 .class_section .class_box-container .box .img-box img {

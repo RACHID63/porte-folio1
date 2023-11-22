@@ -4,6 +4,26 @@
     background-color: rgb(185, 69, 43);
   }
 
+  .text3d {
+    position: relative;
+    top: 3vh;
+    right: -11vw;
+    animation: move 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
+  font-size: 2em;
+  }
+
+  
+.text3d {
+  position: absolute;
+  top: 20vh;
+  right: 35vw;
+  animation: move 2s ease-in-out forwards;
+  animation-fill-mode: forwards;
+}
+
+
+  
   img {
     width: 70%;
     height: 100%;
